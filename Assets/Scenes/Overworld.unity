@@ -238,8 +238,8 @@ GameObject:
   - component: {fileID: 480028030}
   - component: {fileID: 480028026}
   m_Layer: 0
-  m_Name: Bee
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 480028025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4079dcad159142c695c2270ccf87c7b, type: 3}
+  m_Script: {fileID: 11500000, guid: ecca3386fe0c94faeb6182213c7c430f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   offsetAngle: -90
@@ -300,12 +300,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7785a6bcb5c7f482b89d831896cbc812, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3aa3955b30f9f4f4fab1356bb663308b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -320,7 +320,7 @@ Transform:
   m_GameObject: {fileID: 480028025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.76, y: 0, z: 0}
-  m_LocalScale: {x: 5.1314, y: 5.1314, z: 5.1314}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

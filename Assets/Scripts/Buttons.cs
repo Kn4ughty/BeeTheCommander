@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
     public void StartGame() {
-        SceneManager.LoadScene("GamePlay");
-        //SceneManager.LoadScene (sceneName:"GamePlay");
-        //SceneManager.LoadScene("GamePlay", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Menu");
+        //SceneManager.LoadScene (sceneName:"Menu");
+        //SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
     }
 }
