@@ -889,6 +889,7 @@ MonoBehaviour:
   spawnCountY: 25
   spacingX: 2.5
   spacingY: 2.5
+  maxOffset: 1
 --- !u!4 &1042472782
 Transform:
   m_ObjectHideFlags: 0

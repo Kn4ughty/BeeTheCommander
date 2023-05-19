@@ -9,6 +9,7 @@ public class BeeRainEr : MonoBehaviour
     public int spawnCountY;
     public float spacingX;
     public float spacingY;
+    public float maxOffset;
 
     private void Start()
     {
@@ -19,41 +20,11 @@ public class BeeRainEr : MonoBehaviour
             for (int y = 0; y < spawnCountY; y++)
             {
                 Vector3 spawnOffset = new Vector3(spacingX * x, spacingY * y, 0);
-                Vector3 spawnPoint = spawnPosition + spawnOffset;
-                Instantiate(objectPrefab, spawnPoint, Quaternion.identity);
+                Vector3 randomizedOffset = new Vector3(Random.Range(-maxOffset, maxOffset), Random.Range(-maxOffset, maxOffset), 0);
+                Vector3 spawnPoint = spawnPosition + spawnOffset + randomizedOffset;
+                Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+                Instantiate(objectPrefab, spawnPoint, randomRotation);
             }
         }
     }
-
-    /*
-    public GameObject SpawnObject;
-    
-    public int SpawnCountX;
-    public int SpawnCountY;
-
-    public float SpacingX;
-    public float SpacingY;
-
-    public Vector2 SpawnPosition;
-
-    void Start()
-    {
-        Debug.Log("Start() method called.");
-        Debug.Log("SpawnObject: " + SpawnObject);
-
-        SpawnPosition = new Vector2(transform.position.x, transform.position.y);
-        
-        Debug.Log("Spawn Position= " + SpawnPosition);
-
-        // Goes over the X position
-        for (var SpawnX = 0; SpawnX < SpawnCountX; SpawnX += 1) {
-            xPos = 
-            // Goes over Y
-            for (var y = SpawnPosition[1]; y < SpawnCountY; y += SpacingY) {
-                Debug.Log("x = " + x);
-                Debug.Log("y = " + y);
-                Instantiate(SpawnObject, new Vector2(x, y), Quaternion.identity);
-            } }
-    }
-    */
 }
