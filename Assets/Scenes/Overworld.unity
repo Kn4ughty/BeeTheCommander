@@ -461,8 +461,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 480028028}
-  smoothSpeed: 0
+  smoothSpeed: 1
   offset: {x: 0, y: 0, z: -10}
+  m_OrthographicCamera: {fileID: 755417634}
+  ScrollToZoom: 1
+  ScrollSensitivity: 1
 --- !u!1 &1163754147
 GameObject:
   m_ObjectHideFlags: 0
