@@ -10,10 +10,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     [SerializeField] float CollisionForceMagnitude;
 
+    private Camera mainCamera;
+
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        mainCamera = Camera.main;
     }
 
     // Update is called once per frame
@@ -25,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void LookAtMouse()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        var dir = Input.mousePosition - mainCamera.WorldToScreenPoint(transform.position);
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         angle += offsetAngle;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
