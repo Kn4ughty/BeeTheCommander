@@ -19,8 +19,8 @@ public class CamControl : MonoBehaviour
     public float ZoomLimitHigh = 20;
 
 
-    private void Update() {
-       
+    private void Awake() {
+       m_OrthographicCamera.orthographicSize = 5;
     }
 
     private void LateUpdate()
