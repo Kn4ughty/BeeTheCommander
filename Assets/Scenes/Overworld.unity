@@ -417,7 +417,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -467,7 +467,7 @@ MonoBehaviour:
   ScrollToZoom: 1
   ScrollSensitivity: 1.5
   ZoomLimitLow: 3
-  ZoomLimitHigh: 10
+  ZoomLimitHigh: 20
 --- !u!1 &952886453
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightColour: {r: 0, g: 1, b: 0, a: 1}
   transitionTime: 0.15
+  highlightBrightness: 1.5
 --- !u!61 &952886457
 BoxCollider2D:
   m_ObjectHideFlags: 0

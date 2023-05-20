@@ -20,7 +20,7 @@ public class CamControl : MonoBehaviour
 
 
     private void Awake() {
-       m_OrthographicCamera.orthographicSize = 5;
+       m_OrthographicCamera.orthographicSize = 8;
     }
 
     private void LateUpdate()
