@@ -38,7 +38,7 @@ public class Interactor : MonoBehaviour
 
             if (_interactable != null)
             {
-                if (!_interactionPromptUI.IsDisplayed) _interactionPromptUI.SetUp(_interactable.InteractionPrompt);
+                if (!_interactionPromptUI.IsDisplayed) _interactionPromptUI.SetUp(_interactable.InteractionPrompt, colliders[0].transform.position);
 
                 if (Input.GetKeyDown("e")) _interactable.Interact(this);
             }

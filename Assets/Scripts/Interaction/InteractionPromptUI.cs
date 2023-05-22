@@ -17,10 +17,13 @@ public class InteractionPromptUI : MonoBehaviour
 
     public bool IsDisplayed = false;
 
-    public void SetUp(string promptText)
+    public void SetUp(string promptText, Vector3 location)
     {
         _promptText.text = promptText;
         _uiPanel.SetActive(true);
+
+        _uiPanel.transform.position = location;
+
         IsDisplayed = true;
     }
 
