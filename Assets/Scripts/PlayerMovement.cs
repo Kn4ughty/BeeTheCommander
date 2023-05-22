@@ -84,4 +84,11 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+
+    void OnDrawGizmosSelected() 
+    {
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawRay(_rigidbody.position, _rigidbody.velocity);
+    }
 }
