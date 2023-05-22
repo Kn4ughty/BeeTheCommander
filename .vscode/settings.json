@@ -1,7 +1,6 @@
 {
     "editor.suggest.showReferences": false,
     "files.exclude": {
-        ".meta": true,
-        "**/.meta": true
+        "**/*.meta": true
     }
 }
