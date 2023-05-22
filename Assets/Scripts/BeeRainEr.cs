@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This script creates an array of objects, with customisable amount in x and y, 
+and spacing between objects. 
+It also has the maxOffset variable, which controls the max random offset of the spawn, 
+and the random rotation between 0 and 360 degrees
+*/
 public class BeeRainEr : MonoBehaviour
 {   
     public GameObject objectPrefab;

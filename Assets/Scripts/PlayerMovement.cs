@@ -2,6 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This script controls all the movement of the player including collision.
+It takes the variables
+offsetAngle - offset to account for angle
+_speed - dictates the speed of the player
+CollisonForceMagnitude - used to calculate the amount of force of collisions
+Each Update(), it calls the functions
+LookAtMouse() and Move()
+
+LookAtMouse gets the world position of the mouse, 
+Then to get the angle it uses trig! 
+Then adds the offset angle and sets pos
+
+Move sets the input as a vector2 for input up and down
+Then does some quaternion stuff to rotate around the cursor.
+Then sets the velocity to the vector * the speed
+
+*/
+
 public class PlayerMovement : MonoBehaviour
 {
     public float offsetAngle;
@@ -44,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         var forwardDirection = transform.up;
 
         // Rotate the input vector based on the object's rotation
+        // coming back to this now i have no idea what it means
         // Courtesy of ChatGPT
         var rotatedInput = Quaternion.Euler(0f, 0f, transform.eulerAngles.z) * input;
 

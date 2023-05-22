@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This script upon start gets the current position of the object and stores it in the InitPos variable.
+Then when the object enters a trigger, and the trigger is the ResetObject,
+it resets its position to the InitPos
+*/
+
 public class MenuBeeTeleport : MonoBehaviour
 {
-    Vector3 InitPos;
     public GameObject ResetObject;
+
+    private Vector3 InitPos;
 
     void Start() 
     {
@@ -17,7 +24,6 @@ public class MenuBeeTeleport : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-    //Debug.Log("Target was Hit!" + collision);
 
     if(collision.gameObject == ResetObject)
     {
