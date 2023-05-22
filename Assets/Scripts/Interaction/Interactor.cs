@@ -10,7 +10,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private InteractionPromptUI _interactionPromptUI;
 
     private readonly Collider[] _colliders = new Collider[3];
-    [SerializeField] private int _numFound;
+    private int _numFound;
 
     private Highlight highlight; // Declare the 'highlight' variable here
     private Collider2D LastInteractable = null; // help
