@@ -11,6 +11,10 @@ public class Interactor : MonoBehaviour
     private readonly Collider[] _colliders = new Collider[3];
     [SerializeField] private int _numFound;
 
+    private Highlight highlight; // Declare the 'highlight' variable here
+    private Collider2D LastInteractable = null; // help
+
+
     // Update is called once per frame
     void Update()
     {
@@ -21,14 +25,25 @@ public class Interactor : MonoBehaviour
 
         if (_numFound > 0)
         {
+
             var interactable = colliders[0].GetComponent<IInteractable>();
+
+            highlight = colliders[0].GetComponent<Highlight>();
+            highlight.isHighlighted = true;
+
 
             if (interactable != null && Input.GetKeyDown("e"))
             {
                 interactable.Interact(this);
             }
+            
+            LastInteractable = colliders[0];
         }
-        
+        else if (LastInteractable != null)
+        {
+            highlight = LastInteractable.GetComponent<Highlight>();
+            highlight.isHighlighted = false;
+        }
         
     }
 
