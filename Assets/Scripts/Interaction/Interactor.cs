@@ -7,12 +7,15 @@ public class Interactor : MonoBehaviour
     [SerializeField] private Transform _interactionPoint;
     [SerializeField] private float _interactionRadius = 0.5f;
     [SerializeField] private LayerMask _interactableMask;
+    [SerializeField] private InteractionPromptUI _interactionPromptUI;
 
     private readonly Collider[] _colliders = new Collider[3];
     [SerializeField] private int _numFound;
 
     private Highlight highlight; // Declare the 'highlight' variable here
     private Collider2D LastInteractable = null; // help
+
+    private IInteractable _interactable;
 
 
     void Update()
@@ -25,18 +28,27 @@ public class Interactor : MonoBehaviour
         if (_numFound > 0)
         {
             // Gets interactable thing
-            var interactable = colliders[0].GetComponent<IInteractable>();
+            _interactable = colliders[0].GetComponent<IInteractable>();
 
             // Sets and gets the highlting variable
             highlight = colliders[0].GetComponent<Highlight>();
             highlight.isHighlighted = true;
 
 
-            if (interactable != null && Input.GetKeyDown("e"))
+
+            if (_interactable != null)
+            {
+                if (!_interactionPromptUI.IsDisplayed) _interactionPromptUI.SetUp(_interactable.InteractionPrompt);
+
+                if (Input.GetKeyDown("e")) _interactable.Interact(this);
+            }
+            /*
+            if (_interactable != null && Input.GetKeyDown("e"))
             {
                 // Runs the interact function
-                interactable.Interact(this);
+                _interactable.Interact(this);
             }
+            */
             
             // this is used so that the highlighting can be turned off when no longer in range
             LastInteractable = colliders[0];
@@ -45,7 +57,17 @@ public class Interactor : MonoBehaviour
         {
             highlight = LastInteractable.GetComponent<Highlight>();
             highlight.isHighlighted = false;
+            // if (_interactable != null) _interactable = null;
+            if (_interactionPromptUI.IsDisplayed) _interactionPromptUI.Close();
+            
         }
+        /*
+        else
+        {
+            if (_interactable != null) _interactable = null;
+            if (_interactionPromptUI.IsDisplayed) _interactionPromptUI.Close();
+        }
+        */
         
     }
 
