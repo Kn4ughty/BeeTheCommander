@@ -17,6 +17,19 @@ public class Interactor : MonoBehaviour
        //_numFound = Physics2D.OverlapCircle(_interactionPoint.position, _interactionRadius, _colliders, _interactableMask); 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(_interactionPoint.position, _interactionRadius, _interactableMask);
         _numFound = colliders.Length;
+        //_colliders = colliders;
+
+        if (_numFound > 0)
+        {
+            var interactable = colliders[0].GetComponent<IInteractable>();
+
+            if (interactable != null && Input.GetKeyDown("e"))
+            {
+                interactable.Interact(this);
+            }
+        }
+        
+        
     }
 
     /// Callback to draw gizmos only if the object is selected.

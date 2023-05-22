@@ -377,7 +377,8 @@ GameObject:
   - component: {fileID: 952886454}
   - component: {fileID: 952886457}
   - component: {fileID: 952886456}
-  m_Layer: 0
+  - component: {fileID: 952886458}
+  m_Layer: 6
   m_Name: Logs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,6 +494,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.68, y: 0.8}
   m_EdgeRadius: 0
+--- !u!114 &952886458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952886453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10371dd5d152c4511bbb700bb468c210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prompt: waao
 --- !u!1 &1163754147
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,5 +936,5 @@ MonoBehaviour:
   _interactionRadius: 1.37
   _interactableMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 64
   _numFound: 0
