@@ -763,9 +763,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightColour: {r: 0, g: 1, b: 0, a: 1}
+  m_highlightColour: {r: 0, g: 0, b: 0, a: 0}
   transitionTime: 0.15
   highlightBrightness: 1.5
   isHighlighted: 0
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  targetColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &952886457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -804,9 +807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10371dd5d152c4511bbb700bb468c210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prompt: Harvest Logs
-  disapearTime: 2
-  Active: 0
+  invisibilityDuration: 5
+  waitInteractColor: {r: 1, g: 1, b: 1, a: 0.7607843}
 --- !u!1 &1163754147
 GameObject:
   m_ObjectHideFlags: 0

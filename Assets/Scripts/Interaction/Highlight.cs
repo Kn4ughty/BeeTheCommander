@@ -5,14 +5,15 @@ using UnityEngine;
 public class Highlight : MonoBehaviour
 {
     public Color highlightColour = Color.green;
+    public Color m_highlightColour;
     public float transitionTime = 1f;
     public float highlightBrightness = 1.5f; // not in use
 
     public bool isHighlighted;
     private bool m_isHighlighted = false;
 
-    private Color startColor;
-    private Color targetColor;
+    public Color startColor;
+    public Color targetColor;
 
     private Coroutine transitionCoroutine;
     private Renderer objectRenderer;
@@ -27,7 +28,6 @@ public class Highlight : MonoBehaviour
         // This is done so that i dont remember but its important trust
         if (isHighlighted != m_isHighlighted && OnVariableChange != null)
         {
-            m_isHighlighted = isHighlighted;
             OnVariableChange(isHighlighted);
             if (isHighlighted)
             {
@@ -55,6 +55,7 @@ public class Highlight : MonoBehaviour
     private void Start() {
         objectRenderer = GetComponent<Renderer>();
         startColor = objectRenderer.material.color;
+        m_highlightColour = highlightColour;
         OnVariableChange += HandleVariableChange;
     }
     // hellooooo

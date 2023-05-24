@@ -11,10 +11,14 @@ public class WoodHarvest : MonoBehaviour, IInteractable
     private float interactionTime = 0f;
 
     private Renderer objectRenderer;
+    private Highlight Highlighter;
+
+    public Color waitInteractColor;
 
     private void Awake()
     {
         objectRenderer = GetComponent<Renderer>();
+        Highlighter = gameObject.GetComponent<Highlight>();
         Debug.Log("Helloo");
     }
 
@@ -32,12 +36,18 @@ public class WoodHarvest : MonoBehaviour, IInteractable
     private IEnumerator InteractCoroutine()
     {
         isInteracted = true;
-        objectRenderer.enabled = false;
+        Highlighter.highlightColour = waitInteractColor;
+        Highlighter.isHighlighted = false;
+        Highlighter.isHighlighted = true;
+        //objectRenderer.enabled = false;
 
         // Wait for the specified duration
         yield return new WaitForSeconds(invisibilityDuration);
 
-        objectRenderer.enabled = true;
+
+        Highlighter.highlightColour = Highlighter.m_highlightColour;
+        Highlighter.isHighlighted = false;
+        //objectRenderer.enabled = true;
         isInteracted = false;
 
         /*
