@@ -805,6 +805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prompt: Harvest Logs
+  disapearTime: 2
+  Active: 0
 --- !u!1 &1163754147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 667175918279237042, guid: f7452b10133144ddfb1448ce45512b5b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.81
       objectReference: {fileID: 0}
     - target: {fileID: 667175918279237042, guid: f7452b10133144ddfb1448ce45512b5b, type: 3}
       propertyPath: m_LocalRotation.w

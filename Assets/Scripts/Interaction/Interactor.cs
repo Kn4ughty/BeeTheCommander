@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+There has got to be a memory leak somewhere in this mess
+*/
+
 public class Interactor : MonoBehaviour
 {
     [SerializeField] private Transform _interactionPoint;
@@ -57,7 +61,6 @@ public class Interactor : MonoBehaviour
         {
             highlight = LastInteractable.GetComponent<Highlight>();
             highlight.isHighlighted = false;
-            // if (_interactable != null) _interactable = null;
             if (_interactionPromptUI.IsDisplayed) _interactionPromptUI.Close();
             
         }
