@@ -60,22 +60,6 @@ public class Highlight : MonoBehaviour
     // hellooooo
 
 
-    private void OnMouseEnter()
-    {
-        if (transitionCoroutine != null)
-            StopCoroutine(transitionCoroutine);
-
-        isHighlighted = true;
-    }
-
-    private void OnMouseExit()
-    {
-        if (transitionCoroutine != null)
-            StopCoroutine(transitionCoroutine);
-
-        isHighlighted = false;
-    }
-
     private IEnumerator TransitionColor(Color targetColor)
     {
         float elapsedTime = 0f;

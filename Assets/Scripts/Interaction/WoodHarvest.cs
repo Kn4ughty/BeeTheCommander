@@ -15,7 +15,7 @@ public class WoodHarvest : MonoBehaviour, IInteractable
     private void Awake()
     {
         objectRenderer = GetComponent<Renderer>();
-        Debug.Log("kys ksjdhfgkdkjdfhg");
+        Debug.Log("Helloo");
     }
 
     public bool Interact(Interactor interactor)
