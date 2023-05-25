@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
 {
@@ -10,7 +10,8 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
 
 
     public GameObject dialoguePanel;
-    public Text dialogueText;
+    // public Text dialogueText;
+    [SerializeField] private TextMeshProUGUI dialogueText;
     public string[] dialogue;
     private int index;
     public float wordSpeed;
