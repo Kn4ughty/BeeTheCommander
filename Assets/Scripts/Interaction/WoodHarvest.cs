@@ -14,7 +14,7 @@ public class WoodHarvest : MonoBehaviour, IInteractable
 
     private bool isInteracted = false;
     public float invisibilityDuration = 5f;
-    private float interactionTime = 0f;
+    //private float interactionTime = 0f;
 
     public float promptUpdateSpeed = 0.1f;
 
