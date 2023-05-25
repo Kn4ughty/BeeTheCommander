@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class WoodHarvest : MonoBehaviour, IInteractable
 {
-    public string InteractionPrompt => "Interact with object";
+    //public string InteractionPrompt => "Havest Wood";
+    public string InteractionPrompt { get; set; } = "Harvest Wood";
+    private string m_InteractionPrompt => "Havest Wood";
+    public string WaitingPrompt => "Harvested, please wait for : ";
+
 
     private bool isInteracted = false;
     public float invisibilityDuration = 5f;
     private float interactionTime = 0f;
+
+    public float promptUpdateSpeed = 0.1f;
 
     private Renderer objectRenderer;
     private Highlight Highlighter;
@@ -37,30 +43,30 @@ public class WoodHarvest : MonoBehaviour, IInteractable
     {
         isInteracted = true;
         Highlighter.highlightColour = waitInteractColor;
+        // this is dumb, can be fixed by just running the function. but it works :/
         Highlighter.isHighlighted = false;
         Highlighter.isHighlighted = true;
-        //objectRenderer.enabled = false;
+        //objectRenderer.enabled = false; // old method
 
         // Wait for the specified duration
-        yield return new WaitForSeconds(invisibilityDuration);
+        var EndTime = Time.time + invisibilityDuration;
+        while (EndTime >= Time.time)
+        {
+            yield return new WaitForSeconds(promptUpdateSpeed);
+            var timeLeft = EndTime - Time.time;
+            var timeLeftStr = timeLeft.ToString("0.##");
+            InteractionPrompt = WaitingPrompt + timeLeftStr + "s";
+        }
+        //yield return new WaitForSeconds(invisibilityDuration);
 
 
+        //Highlighter.highlightColour = Highlighter.m_highlightColour;
         Highlighter.highlightColour = Highlighter.m_highlightColour;
         Highlighter.isHighlighted = false;
-        //objectRenderer.enabled = true;
+        //objectRenderer.enabled = true; // old method
         isInteracted = false;
 
-        /*
-        isInteracted = true;
-        objectRenderer.enabled = false;
-
-        // Wait for the specified duration
-        yield return new WaitForSeconds(invisibilityDuration);
-
-        objectRenderer.enabled = true;
-        isInteracted = false;
-
-        */
+        InteractionPrompt = m_InteractionPrompt;
     }
 }
 

@@ -27,6 +27,11 @@ public class InteractionPromptUI : MonoBehaviour
         IsDisplayed = true;
     }
 
+    public void UpdatePrompt(string promptText)
+    {
+        _promptText.text = promptText;
+    }
+
     public void Close() 
     {
         _uiPanel.SetActive(false);
