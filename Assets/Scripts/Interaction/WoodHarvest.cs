@@ -18,6 +18,8 @@ public class WoodHarvest : MonoBehaviour, IInteractable
 
     private Renderer objectRenderer;
     private Highlight Highlighter;
+    //private Coroutine transitionCoroutine;
+
 
     public Color waitInteractColor;
 
@@ -42,11 +44,13 @@ public class WoodHarvest : MonoBehaviour, IInteractable
     private IEnumerator InteractCoroutine()
     {
         isInteracted = true;
+        
         Highlighter.highlightColour = waitInteractColor;
         // this is dumb, can be fixed by just running the function. but it works :/
         Highlighter.isHighlighted = false;
         Highlighter.isHighlighted = true;
         //objectRenderer.enabled = false; // old method
+        
 
         // Wait for the specified duration
         var EndTime = Time.time + invisibilityDuration;
@@ -59,10 +63,12 @@ public class WoodHarvest : MonoBehaviour, IInteractable
         }
         //yield return new WaitForSeconds(invisibilityDuration);
 
-
-        //Highlighter.highlightColour = Highlighter.m_highlightColour;
+        
+        //Highlighter.highlightColour = Highlighter.startColor;
+        //Highlighter.isHighlighted = false;
         Highlighter.highlightColour = Highlighter.m_highlightColour;
         Highlighter.isHighlighted = false;
+        
         //objectRenderer.enabled = true; // old method
         isInteracted = false;
 
@@ -71,7 +77,7 @@ public class WoodHarvest : MonoBehaviour, IInteractable
 }
 
 
-    /* I have had enought of this shit omg aaa 
+    /* I have had enought of this poop omg aaa 
     // I jabe spent hors on trying to make it wait, grrggrgrfghrfrfr
     public string _prompt;
     public float disapearTime = 10f;

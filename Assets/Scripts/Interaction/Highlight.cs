@@ -24,6 +24,7 @@ public class Highlight : MonoBehaviour
 
     private void Update()
     {
+        
         // This mess makes it so that the code below only runs when the var changes
         // This is done so that i dont remember but its important trust
         if (isHighlighted != m_isHighlighted && OnVariableChange != null)
@@ -38,6 +39,18 @@ public class Highlight : MonoBehaviour
                 transitionCoroutine = StartCoroutine(TransitionColor(startColor));
             }
         }
+        
+        /*
+        if (isHighlighted)
+        {
+            transitionCoroutine = StartCoroutine(TransitionColor(highlightColour));
+        }
+        else 
+        {
+            transitionCoroutine = StartCoroutine(TransitionColor(startColor));
+        }
+        */
+        
     }
 
     // works without using thjis
@@ -61,14 +74,15 @@ public class Highlight : MonoBehaviour
     // hellooooo
 
 
-    private IEnumerator TransitionColor(Color targetColor)
+    public IEnumerator TransitionColor(Color targetColor)
     {
         float elapsedTime = 0f;
         Color currentColor = objectRenderer.material.color;
 
         while (elapsedTime < transitionTime)
         {
-            
+            // currentColor = objectRenderer.material.color;
+
             objectRenderer.material.color = Color.Lerp(currentColor, targetColor, elapsedTime / transitionTime);
             elapsedTime += Time.deltaTime;
             yield return null;
