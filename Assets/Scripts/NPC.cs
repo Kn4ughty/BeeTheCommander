@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
 {
     public string InteractionPrompt { get; set; } = "Interact"; //Prompt that comes up when before interacting with
+    public bool isInInteractionRange {get; set; }
+
 
     public GameObject dialoguePanel;
     public Text dialogueText;

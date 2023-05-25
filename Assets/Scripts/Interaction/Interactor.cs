@@ -37,6 +37,7 @@ public class Interactor : MonoBehaviour
             // Sets and gets the highlting variable
             highlight = colliders[0].GetComponent<Highlight>();
             highlight.isHighlighted = true;
+            _interactable.isInInteractionRange = true;
 
 
 

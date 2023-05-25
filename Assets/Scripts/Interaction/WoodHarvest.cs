@@ -9,6 +9,8 @@ public class WoodHarvest : MonoBehaviour, IInteractable
     private string m_InteractionPrompt => "Havest Wood";
     public string WaitingPrompt => "Harvested, please wait for : ";
 
+    public bool isInInteractionRange {get; set; }
+
 
     private bool isInteracted = false;
     public float invisibilityDuration = 5f;
@@ -25,6 +27,7 @@ public class WoodHarvest : MonoBehaviour, IInteractable
 
     private void Awake()
     {
+        isInInteractionRange = false;
         objectRenderer = GetComponent<Renderer>();
         Highlighter = gameObject.GetComponent<Highlight>();
         Debug.Log("Helloo");
