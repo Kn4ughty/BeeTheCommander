@@ -5,17 +5,44 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
     public float speed;
+    bool turning = false;
 
     void Start()
     {
         speed = Random.Range(FlockManager.FM.minSpeed, FlockManager.FM.maxSpeed);
-
     }
 
 
     void Update()
     {
-        ApplyRules();
+        /*
+        Bounds b = new Bounds(FlockManager.FM.transform.position, new Vector3(FlockManager.FM.FlyLimit.x, FlockManager.FM.FlyLimit.y, 1) * 2);
+
+        if (!b.Contains(transform.position))
+        {
+            turning = true;
+        }
+        else
+            turning = false;
+        
+        if (turning)
+        {
+            //Vector2 direction = new Vector3(FlockManager.FM.goalPos.x, FlockManager.FM.goalPos.y, 0) - transform.position;
+            Vector2 direction = new Vector3(FlockManager.FM.transform.position.x, FlockManager.FM.transform.position.y, 0) - transform.position;
+            //Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(direction.x, direction.y, 0));
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), FlockManager.FM.rotationSpeed * Time.deltaTime);
+        }
+        */
+        
+        if (Random.Range(0, 1000) < 10)
+        {
+            speed = Random.Range(FlockManager.FM.minSpeed, FlockManager.FM.maxSpeed);
+        }
+        if (Random.Range(0, 100) < 90)
+        {
+            ApplyRules();
+        }
+        
         this.transform.Translate(0, speed * Time.deltaTime, 0);
     }
 
@@ -56,7 +83,7 @@ public class Flock : MonoBehaviour
         
         if (groupSize > 0)
         {
-            vcenter = vcenter / groupSize;
+            vcenter = vcenter / groupSize + (FlockManager.FM.goalPos - new Vector2(transform.position.x, transform.position.y));
             speed = speed / groupSize;
 
             Vector2 direction = (vcenter + vavoid) - new Vector2(transform.position.x, transform.position.y);
