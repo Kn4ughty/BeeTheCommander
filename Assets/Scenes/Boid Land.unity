@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 1445033092}
   - component: {fileID: 1445033091}
   - component: {fileID: 1445033090}
+  - component: {fileID: 1445033093}
   m_Layer: 0
   m_Name: bee
   m_TagString: Untagged
@@ -306,13 +307,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445033089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1641, y: -1.265, z: 0}
+  m_LocalPosition: {x: -12.04, y: -12.06, z: 0}
   m_LocalScale: {x: 0.3846, y: 0.3846, z: 0.3846}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1445033093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445033089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51863a7129a5b480aa8b77a58e59ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &1763735391
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,3 +371,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1425cb95cfca64be3817ad74ddfb8b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Prefab: {fileID: 1445033089}
+  numBees: 20
+  allBees: []
+  FlyLimit: {x: 10, y: 10}
+  minSpeed: 1.09
+  maxSpeed: 5
+  neighbourDistance: 10
+  rotationSpeed: 5
