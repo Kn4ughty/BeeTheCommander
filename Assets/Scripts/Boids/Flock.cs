@@ -34,7 +34,7 @@ public class Flock : MonoBehaviour
         }
         */
         
-        if (Random.Range(0, 1000) < 10)
+        if (Random.Range(0, 1000) < 10) // could * by dealta.time to make it fps independent
         {
             speed = Random.Range(FlockManager.FM.minSpeed, FlockManager.FM.maxSpeed);
         }
