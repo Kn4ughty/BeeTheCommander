@@ -44,8 +44,6 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
 
     public void NextLine()
     {
-
-
         contButton.SetActive(false);
 
         if(index < dialogue.Length -1)
@@ -62,7 +60,9 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
 
     public bool Interact(Interactor interactor) //function runs when interacted with
     {
-        if(dialoguePanel.activeInHierarchy)
+        Debug.Log("Interacted with NPC");
+        dialoguePanel.SetActive(true);
+        if (dialoguePanel.activeInHierarchy)
         {
             ResetText();
         }
@@ -72,6 +72,7 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
             StartCoroutine(Typing());
         }
         ResetText();
+        
         return true; //end function
     }
 }
