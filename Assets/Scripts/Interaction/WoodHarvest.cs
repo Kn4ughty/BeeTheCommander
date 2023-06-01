@@ -30,15 +30,13 @@ public class WoodHarvest : MonoBehaviour, IInteractable
         isInInteractionRange = false;
         objectRenderer = GetComponent<Renderer>();
         Highlighter = gameObject.GetComponent<Highlight>();
-        Debug.Log("Helloo");
+        Debug.Log("Components Ready To Be Modified");
     }
 
     public bool Interact(Interactor interactor)
     {
         if (isInteracted)
             return false;
-
-        Debug.Log("Interqactored!!!!!!!!!!!");
         
         StartCoroutine(InteractCoroutine());
         return true;
