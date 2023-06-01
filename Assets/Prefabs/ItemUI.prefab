@@ -319,10 +319,6 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls: []
-  - eventID: 5
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
   - eventID: 6
     callback:
       m_PersistentCalls:
