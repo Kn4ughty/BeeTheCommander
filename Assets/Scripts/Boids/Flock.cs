@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
     public float speed;
-    bool turning = false;
+    // bool turning = false;
 
     void Start()
     {

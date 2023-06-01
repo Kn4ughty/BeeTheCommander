@@ -59,7 +59,7 @@ public class WoodHarvest : MonoBehaviour, IInteractable
         {
             yield return new WaitForSeconds(promptUpdateSpeed);
             var timeLeft = EndTime - Time.time;
-            var timeLeftStr = timeLeft.ToString("0.##");
+            var timeLeftStr = timeLeft.ToString("0.#");
             InteractionPrompt = WaitingPrompt + timeLeftStr + "s";
         }
         //yield return new WaitForSeconds(invisibilityDuration);

@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
     public string InteractionPrompt { get; set; } = "Interact"; //Prompt that comes up when before interacting with
     public bool isInInteractionRange {get; set; }
 
+    private bool isInteracted = false;
 
     public GameObject dialoguePanel;
     // public Text dialogueText;
@@ -16,6 +17,10 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
     private int index;
     public float wordSpeed;
     public GameObject contButton;
+
+    private void Start() {
+        dialoguePanel.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()
@@ -60,8 +65,24 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
 
     public bool Interact(Interactor interactor) //function runs when interacted with
     {
+        if (isInteracted)
+            return false;
+
         Debug.Log("Interacted with NPC");
+
+        StartCoroutine(InteractCoroutine());
+        
+        return true; //end function
+    }
+
+    private IEnumerator InteractCoroutine()
+    {
+        Debug.Log("Started Coroutine");
+        isInteracted = true;
+        
+        Debug.Log("about to set active");
         dialoguePanel.SetActive(true);
+        Debug.Log("Should be active now");
         if (dialoguePanel.activeInHierarchy)
         {
             ResetText();
@@ -73,6 +94,8 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
         }
         ResetText();
         
-        return true; //end function
+        isInteracted = false;
+
+        yield return null;
     }
 }
