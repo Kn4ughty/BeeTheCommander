@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.EventSystems;
 
 public class InventoryItem : MonoBehaviour
 {
@@ -59,5 +60,23 @@ public class InventoryItem : MonoBehaviour
     public void OnDrop()
     {
         OnItemDroppedOn?.Invoke(this);
+    }
+
+    public void OnEndDrag()
+    {
+        OnItemEndDrag?.Invoke(this);
+    }
+
+    public void OnPointerClick(BaseEventData data)
+    {
+        PointerEventData pointerData = (PointerEventData)data;
+        if(pointerData.button == PointerEventData.InputButton.Right)
+        {
+            OnRightBtnMouseClick?.Invoke(this);
+        }
+        else
+        {
+            OnItemClicked.Invoke(this);
+        }
     }
 }
