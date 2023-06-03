@@ -3,7 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-There has got to be a memory leak somewhere in this mess
+This code sucks
+I dont like it
+It will do
+
+How to improve it tho
+- Make highlighting an optional component
+- Make highlting have its smooth transition
+- Buttom prompt ui?
+    - When will image state change
+    - When pressed
+    - But the image only needs to be there before its pressed
+    - Then what is the pressed down image for?
+    - Having it stick around is dumb
+    - How about it stays pressed down until liften off, then disapears?
+    - That would leave an empty area where it used to be
+    - Recenting text would be jaring
+    - Im ditching the keyboard input button down. It will just show "E"
 */
 
 public class Interactor : MonoBehaviour
