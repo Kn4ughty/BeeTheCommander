@@ -80,9 +80,11 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
         Debug.Log("Started Coroutine");
         isInteracted = true;
         
+        /* this doesnt work :(
         Debug.Log("about to set active");
         dialoguePanel.SetActive(true);
         Debug.Log("Should be active now");
+        */
         if (dialoguePanel.activeInHierarchy)
         {
             ResetText();
