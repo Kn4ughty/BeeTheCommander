@@ -817,17 +817,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0687e291f274370816cfb0dd87cbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracted: 0
   dialoguePanel: {fileID: 834187872}
   dialogueText: {fileID: 1475224593}
   dialogue:
   - 'This is a test message '
-  - BABABABABABAA
-  - BABABABABABAA
-  wordSpeed: 0.06
+  - This is element 1
+  - Element 2 babyyyy
+  wordSpeed: 0.03
   contButton: {fileID: 1609005627}
-  ContinueButtonSpriteRenderer: {fileID: 0}
-  continueButtonUp: {fileID: 0}
-  continueButtonDown: {fileID: 0}
 --- !u!114 &1242750536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1268,10 +1266,10 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.72300005, g: 0.72300005, b: 0.72300005, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1279,7 +1277,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: -2109378042, guid: be82a5efbeb024410a475719d6bb287b, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1401,7 +1399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: '>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

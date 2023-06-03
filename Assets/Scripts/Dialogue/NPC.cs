@@ -8,7 +8,7 @@ public class NPC : MonoBehaviour, IInteractable
     public string InteractionPrompt { get; set; } = "Interact"; //Prompt that comes up when before interacting with
     public bool isInInteractionRange {get; set; }
 
-    private bool isInteracted = false;
+    public bool isInteracted = false;
 
     public GameObject dialoguePanel;
     // public Text dialogueText;
@@ -18,9 +18,7 @@ public class NPC : MonoBehaviour, IInteractable
     public float wordSpeed;
 
     public GameObject contButton;
-    public SpriteRenderer ContinueButtonSpriteRenderer;
-    public Sprite continueButtonUp;
-    public Sprite continueButtonDown;
+
 
     private void Start() {
         dialoguePanel.SetActive(false);
@@ -31,7 +29,6 @@ public class NPC : MonoBehaviour, IInteractable
     {
         if (dialogueText.text == dialogue[index])
         {
-            Debug.Log("Line34 is running");
             contButton.SetActive(true);
         }
     }
@@ -67,6 +64,8 @@ public class NPC : MonoBehaviour, IInteractable
         else
         {
             ResetText();
+            dialoguePanel.SetActive(false);
+            isInteracted = false;
         }
     }
 
@@ -86,13 +85,12 @@ public class NPC : MonoBehaviour, IInteractable
     private IEnumerator InteractCoroutine()
     {
         Debug.Log("Started Coroutine");
+
         isInteracted = true;
         
-        /* this doesnt work :(
-        Debug.Log("about to set active");
-        dialoguePanel.SetActive(true);
-        Debug.Log("Should be active now");
-        */
+
+        // Is the reset text function nessecary?
+        /*
         if (dialoguePanel.activeInHierarchy)
         {
             ResetText();
@@ -102,9 +100,19 @@ public class NPC : MonoBehaviour, IInteractable
             dialoguePanel.SetActive(true);
             StartCoroutine(Typing());
         }
-        ResetText();
+        */
         
-        isInteracted = false;
+        /*
+        ResetText();
+        dialoguePanel.SetActive(true);
+        */
+        ResetText();
+        dialoguePanel.SetActive(true);
+        StartCoroutine(Typing());
+
+        
+        //Debug.Log("Setting Activing false at end of interaction");
+        //dialoguePanel.SetActive(false);
 
         yield return null;
     }
