@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
+public class NPC : MonoBehaviour, IInteractable
 {
     public string InteractionPrompt { get; set; } = "Interact"; //Prompt that comes up when before interacting with
     public bool isInInteractionRange {get; set; }
@@ -12,11 +12,15 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
 
     public GameObject dialoguePanel;
     // public Text dialogueText;
-    [SerializeField] private TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI dialogueText;
     public string[] dialogue;
     private int index;
     public float wordSpeed;
+
     public GameObject contButton;
+    public SpriteRenderer ContinueButtonSpriteRenderer;
+    public Sprite continueButtonUp;
+    public Sprite continueButtonDown;
 
     private void Start() {
         dialoguePanel.SetActive(false);
@@ -27,15 +31,17 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
     {
         if (dialogueText.text == dialogue[index])
         {
+            Debug.Log("Line34 is running");
             contButton.SetActive(true);
         }
     }
 
     public void ResetText()
     {
+        Debug.Log("ResetText function Running");
         dialogueText.text = "";
         index = 0;
-        dialoguePanel.SetActive(false);
+        //dialoguePanel.SetActive(false);
     }
 
     IEnumerator Typing()
@@ -49,6 +55,7 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
 
     public void NextLine()
     {
+        Debug.Log("Next line is running");
         contButton.SetActive(false);
 
         if(index < dialogue.Length -1)
@@ -70,6 +77,7 @@ public class NPC : MonoBehaviour, IInteractable //This shit mean it interact
 
         Debug.Log("Interacted with NPC");
 
+        dialoguePanel.SetActive(true);
         StartCoroutine(InteractCoroutine());
         
         return true; //end function
