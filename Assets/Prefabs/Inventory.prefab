@@ -33,10 +33,10 @@ RectTransform:
   m_Father: {fileID: 6407191507329528196}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 37.5, y: -37.5}
+  m_SizeDelta: {x: 55, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6407191506719426152
 CanvasRenderer:
@@ -108,10 +108,10 @@ RectTransform:
   m_Father: {fileID: 6407191507358757458}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 322.3413, y: 441.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &6407191506873707053
 MonoBehaviour:
@@ -410,23 +410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Bee movie rant in defense of Ken, the boyfriend
-
-    Imagine if your wife
-    fucking left you for a goddamn bee. Like jesus christ they only live for 30 full
-    days that''s not even enough time to develop a good relationship. If you ask
-    me my man Ken dodged a bullet right there. That fucking bee even got his wife
-    involved in a court case, the fucking manipulative psychopath. And for what even,
-    fucking honey?? Its a healthy nutritious product and the bees don''t even get
-    hurt when they collect it. In fact they get a free fucking hive in a protected
-    area for fuck sake . And besides after they ban honey collection what do you
-    think will happen to those bees in the hives huh? That''s right the fucking honeybee
-    holocaust. Do they think the beekeepers will just keep those little fuckers for
-    fun?? Hell no they''ll get exterminated at speeds unbeknownst to man. That will
-    then cause all the other fucking plants to die because you know pollens and shit
-    and then that''s it for us too. The end of the world as we know it. All because
-    some horny bitch wanted some fancy jazz listening bee dick. I say fuck her man,
-    i hope Ken is doing well for himself that man deserves it.'
+  m_text: dbdbdb
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1350,9 +1334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f330ca529dae45a7be2178c29bb2b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemImage: {fileID: 6407191508102316683}
-  title: {fileID: 6407191508274638290}
-  description: {fileID: 6407191507161839341}
 --- !u!1 &6407191508527519649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,10 +1578,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72187eb95414465fbfb8e39c6812feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 5512659114081664816, guid: 4309bacce77674955b14569168aebf82, type: 3}
-  contentPanel: {fileID: 6407191506873707052}
-  itemDescription: {fileID: 3871906532268065092}
-  image: {fileID: 0}
-  quantity: 0
-  title: 
-  description: 
