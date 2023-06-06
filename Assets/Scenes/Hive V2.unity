@@ -304,6 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0687e291f274370816cfb0dd87cbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracted: 0
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
   dialogue: []
@@ -319,7 +320,7 @@ PrefabInstance:
     - target: {fileID: 5238000012842679123, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
       propertyPath: inventoryUI
       value: 
-      objectReference: {fileID: 976019105}
+      objectReference: {fileID: 0}
     - target: {fileID: 5238000012842679123, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
       propertyPath: InventorySize
       value: 5
@@ -499,17 +500,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &976019105 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3272836393269059409, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
-  m_PrefabInstance: {fileID: 6407191508540040892}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c72187eb95414465fbfb8e39c6812feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &976955686
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +797,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3272836393269059409, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 21300000, guid: 1326f16b3d0434896b242aef5978b9c6, type: 3}
+    - target: {fileID: 3272836393269059409, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: title
+      value: Logs
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272836393269059409, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272836393269059409, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: description
+      value: A small pile of wooden logs, neatly stacked together.
+      objectReference: {fileID: 0}
     - target: {fileID: 3587520134537025995, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1103,6 +1109,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6407191506873707052, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6407191506917023968, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1348,6 +1358,30 @@ PrefabInstance:
       value: 'Insert Description Here
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407191507161839347, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407191507161839347, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407191507161839347, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407191507161839347, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407191507161839347, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407191507161839347, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6407191507227594382, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
       propertyPath: m_AnchorMax.y
