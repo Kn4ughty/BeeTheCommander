@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-// might be the wrong ui system?
 using UnityEngine.UI;
 
 
@@ -38,6 +37,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void Update() {
+        // If the text on screen matches the stored text, turn on the continue button
         if (dialogueTextObject.text == dialogueStringArray[stringArrayIndex])
         continueButtonObject.SetActive(true);
     }
