@@ -23,13 +23,16 @@ public class DialogueManager : MonoBehaviour
     public float wordSpeed = 0.3f;
 
     [HideInInspector]
-    public string[] dialogueStringArray;
+    public string[] dialogueStringArray = {"Balls"};
     [HideInInspector]
     public string NPCNameText;
     [HideInInspector]
+    public Sprite NPCImage;
+    [HideInInspector]
     public Image NPCImageComponent;
 
-    private int stringArrayIndex;
+
+    private int stringArrayIndex = 0;
 
     private void Start() {
         NPCImageComponent = NPCImageObject.GetComponent<Image>();
@@ -38,8 +41,10 @@ public class DialogueManager : MonoBehaviour
 
     private void Update() {
         // If the text on screen matches the stored text, turn on the continue button
-        if (dialogueTextObject.text == dialogueStringArray[stringArrayIndex])
-        continueButtonObject.SetActive(true);
+        // And the index is not greater than the size of the array
+        if (stringArrayIndex < dialogueStringArray.Length && dialogueTextObject.text == dialogueStringArray[stringArrayIndex])
+            continueButtonObject.SetActive(true);
+        
     }
 
     public void ResetText() {
@@ -57,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void NextLine() {
+    public void NextLine() {
         Debug.Log("NextLine is running");
         continueButtonObject.SetActive(false);
 
@@ -74,7 +79,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private IEnumerator InteractCoroutine() {
+    public IEnumerator InteractCoroutine() {
         Debug.Log("Started Coroutine");
 
 
@@ -85,5 +90,4 @@ public class DialogueManager : MonoBehaviour
 
         yield return null;
     }
-
 }

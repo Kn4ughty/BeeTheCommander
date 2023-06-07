@@ -181,15 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0687e291f274370816cfb0dd87cbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCNameText: NPCName
+  dialogueStringArray:
+  - lorem
+  - ipsum
+  NPCImage: {fileID: 0}
+  DialogueManager: {fileID: 0}
   isInteracted: 0
-  dialoguePanel: {fileID: 834187872}
-  dialogueText: {fileID: 1475224593}
-  dialogue:
-  - I am a pile of logs
-  - Why did you think talking to me would work?
-  - You silly billy
-  wordSpeed: 0.03
-  contButton: {fileID: 1609005627}
 --- !u!212 &209703634
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -971,15 +969,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0687e291f274370816cfb0dd87cbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCNameText: NPCName
+  dialogueStringArray:
+  - lorem
+  - ipsum
+  NPCImage: {fileID: 0}
+  DialogueManager: {fileID: 1579301796}
   isInteracted: 0
-  dialoguePanel: {fileID: 834187872}
-  dialogueText: {fileID: 1475224593}
-  dialogue:
-  - 'This is a test message '
-  - This is element 1
-  - Element 2 babyyyy
-  wordSpeed: 0.03
-  contButton: {fileID: 1609005627}
 --- !u!114 &1242750536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,7 +1220,7 @@ GameObject:
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 144aa74618b85974a9a50f612c2fa8fd, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1260,9 +1256,11 @@ MonoBehaviour:
   NPCNameObject: {fileID: 1582181146}
   NPCImageObject: {fileID: 801657033}
   continueButtonObject: {fileID: 1609005627}
-  wordSpeed: 0.3
+  wordSpeed: 0.03
   dialogueStringArray: []
   NPCNameText: 
+  NPCImage: {fileID: 0}
+  NPCImageComponent: {fileID: 0}
 --- !u!1 &1582181144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,8 +1480,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1242750535}
-        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
+      - m_Target: {fileID: 1579301796}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: NextLine
         m_Mode: 1
         m_Arguments:
