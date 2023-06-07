@@ -46,7 +46,7 @@ public class NPC : MonoBehaviour, IInteractable
         DialogueManager.dialogueStringArray = dialogueStringArray;
         DialogueManager.NPCImage = NPCImage;
 
-        DialogueManager.InteractCoroutine();
+        StartCoroutine(DialogueManager.InteractCoroutine());
         
         // ~~isInteracted = false;~~
         // This doesnt work as we need to wait until dialoug completly finished before we allow interaction again
