@@ -11,7 +11,7 @@ public class NPC : MonoBehaviour, IInteractable
     public bool isInInteractionRange {get; set; }
 
     [Header("Dialogue Information")]
-    public string NPCNameText = "NPCName";
+    public string NPCNameString = "NPCName";
     public string[] dialogueStringArray = {"lorem", "ipsum"};
     public Sprite NPCImage;
 
@@ -42,7 +42,7 @@ public class NPC : MonoBehaviour, IInteractable
 
         isInteracted = true;
 
-        DialogueManager.NPCNameText = NPCNameText;
+        DialogueManager.NPCNameString = NPCNameString;
         DialogueManager.dialogueStringArray = dialogueStringArray;
         DialogueManager.NPCImage = NPCImage;
 

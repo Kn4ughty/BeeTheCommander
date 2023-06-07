@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 6743460227561951061}
   - component: {fileID: 8032078936961655271}
   - component: {fileID: 6743460227561951149}
-  - component: {fileID: 5238000012842679123}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -172,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetAngle: -90
-  _speed: 5
+  _speed: 10
   CollisionForceMagnitude: 10
 --- !u!114 &8032078936961655271
 MonoBehaviour:
@@ -213,17 +212,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5238000012842679123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6743460227561951062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55bb6b26be9a04e18bbf47ce73c4482c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryUI: {fileID: 3272836393269059409, guid: e8dc1a95b307c43dd89e03a7a837bc17, type: 3}
-  inventorySize: 5

@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public string[] dialogueStringArray = {"Balls"};
     [HideInInspector]
-    public string NPCNameText;
+    public string NPCNameString;
     [HideInInspector]
     public Sprite NPCImage;
     [HideInInspector]
@@ -83,7 +83,11 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Started Coroutine");
 
 
+        NPCImageComponent.sprite = NPCImage;
+        NPCNameObject.text = NPCNameString;
         ResetText();
+
+
         dialoguePanelObject.SetActive(true);
         StartCoroutine(Typing());
 
