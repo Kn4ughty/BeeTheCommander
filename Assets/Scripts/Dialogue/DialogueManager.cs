@@ -32,6 +32,10 @@ public class DialogueManager : MonoBehaviour
     public Image NPCImageComponent;
 
 
+    public delegate void FinishedTalkingDelegate();
+    public static event FinishedTalkingDelegate FinishedTalking;
+
+
     private int stringArrayIndex = 0;
 
     private void Start() {
@@ -76,6 +80,8 @@ public class DialogueManager : MonoBehaviour
         {
             ResetText();
             dialoguePanelObject.SetActive(false);
+            // need to set source object isinteracterd false here
+            FinishedTalking.Invoke();
         }
     }
 

@@ -46,8 +46,24 @@ public class NPC : MonoBehaviour, IInteractable
         DialogueManager.dialogueStringArray = dialogueStringArray;
         DialogueManager.NPCImage = NPCImage;
 
-        StartCoroutine(DialogueManager.InteractCoroutine());
+        DialogueManager.InteractCoroutine();
+        
+        // ~~isInteracted = false;~~
+        // This doesnt work as we need to wait until dialoug completly finished before we allow interaction again
+        // This means i can probably drop those yield return statements too
 
         yield return null;
+    }
+
+    private void OnEnable() {
+        DialogueManager.FinishedTalking += HandleEvent;
+    }
+
+    private void OnDisable() {
+        DialogueManager.FinishedTalking -= HandleEvent;
+    }
+
+    private void HandleEvent() {
+        isInteracted = false;
     }
 }
