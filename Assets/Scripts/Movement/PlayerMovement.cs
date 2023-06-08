@@ -28,9 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
     [SerializeField] float CollisionForceMagnitude;
-
+    [SerializeField]
+    private float MinimumDistanceToMouse;
     private Camera mainCamera;
 
+    private Vector2 mousePos;
 
     void Start()
     {
@@ -41,25 +43,29 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+
         LookAtMouse();
         Move();
     }
 
     private void LookAtMouse()
     {
-        Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         var dir = Input.mousePosition - mainCamera.WorldToScreenPoint(transform.position);
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         angle += offsetAngle;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
-
+/*
     private void Move()
     {
         // Takes the input
         var input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
+        var distanceToMouse = Vector2.Distance(transform.position, mousePos);
+
         // gets the forward direction in local space
+        // Why do we need to even do this?
         var forwardDirection = transform.up;
 
         // Rotate the input vector based on the object's rotation
@@ -67,7 +73,28 @@ public class PlayerMovement : MonoBehaviour
         // Courtesy of ChatGPT
         var rotatedInput = Quaternion.Euler(0f, 0f, transform.eulerAngles.z) * input;
 
+
         _rigidbody.velocity = rotatedInput.normalized * _speed;
+    }*/
+    private void Move()
+    {
+        var input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        var forwardDirection = transform.up;
+        var rotatedInput = Quaternion.Euler(0f, 0f, transform.eulerAngles.z) * input;
+
+        // Calculate the distance between the player and the mouse cursor
+        Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        float distanceToMouse = Vector2.Distance(transform.position, mousePos);
+
+        // Set a minimum distance threshold to avoid spinning around the cursor
+        if (distanceToMouse > MinimumDistanceToMouse)
+        {
+            _rigidbody.velocity = rotatedInput.normalized * _speed;
+        }
+        else
+        {
+            _rigidbody.velocity = Vector2.zero;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
