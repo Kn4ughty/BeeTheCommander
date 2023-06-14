@@ -85,6 +85,21 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void Option(bool isAccepted) {
+        if (isAccepted) {
+            int QuestNumber = PlayerPrefs.GetInt("QuestNumber");
+            PlayerPrefs.SetInt("QuestNumber", QuestNumber++);
+            
+            QuestNumber = PlayerPrefs.GetInt("QuestNumber");
+            //dialogueTextObject.text += "quest numbre: " + QuestNumber.ToString();
+            Debug.Log(QuestNumber);
+        }
+
+        ResetText();
+        dialoguePanelObject.SetActive(false);
+        FinishedTalking.Invoke();
+    }
+
     public IEnumerator InteractCoroutine() {
         Debug.Log("Started Coroutine");
 
