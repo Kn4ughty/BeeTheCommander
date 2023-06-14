@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 209703633}
   - component: {fileID: 209703632}
   m_Layer: 6
-  m_Name: Logs_160x80
+  m_Name: Log NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,11 +181,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0687e291f274370816cfb0dd87cbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCNameString: Pile of Logs
+  NPCNameString: Woody, Wise Oak Sage
   dialogueStringArray:
   - I am a pile of logs
   - Why did you think talking to me would work?
   - You silly billy
+  - NOW FUCK OFF!
   NPCImage: {fileID: 21300000, guid: 1326f16b3d0434896b242aef5978b9c6, type: 3}
   DialogueManager: {fileID: 1579301796}
   isInteracted: 0
@@ -869,7 +870,7 @@ GameObject:
   - component: {fileID: 1242750536}
   - component: {fileID: 1242750535}
   m_Layer: 6
-  m_Name: Queen Bee
+  m_Name: Queen Bee NPC
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,10 +971,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0687e291f274370816cfb0dd87cbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCNameString: Queen Bee
+  NPCNameString: Her Majesty, The Queen
   dialogueStringArray:
-  - lorem
-  - ipsum
+  - Ah, greetings, young one, you've finally arrived! I need you to amass the bees
+    to rebuild the hive.
+  - Our hive needs worker bees to gather nectar and pollen from the flowers, to repair
+    the broken chambers, and to rebuild our population. We need to strengthen our
+    numbers and ensure the survival of our species.
+  - First, I will teach you the ways of gathering nectar and pollen efficiently.
+    You'll learn to navigate the meadow, avoid predators, and bring back the vital
+    resources we need to rebuild.
+  - Now be quick! Fetch me 10 logs!
   NPCImage: {fileID: 21300000, guid: 77a19c51beeeb4e80a50bbf6c97d53bf, type: 3}
   DialogueManager: {fileID: 1579301796}
   isInteracted: 0
