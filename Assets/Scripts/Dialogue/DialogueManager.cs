@@ -88,7 +88,15 @@ public class DialogueManager : MonoBehaviour
     public void Option(bool isAccepted) {
         if (isAccepted) {
             int QuestNumber = PlayerPrefs.GetInt("QuestNumber");
-            PlayerPrefs.SetInt("QuestNumber", QuestNumber++);
+            if(QuestNumber == 0)
+            {
+                PlayerPrefs.SetInt("QuestNumber", 1);
+            }
+            else
+            {
+                QuestNumber = QuestNumber + 1;
+                PlayerPrefs.SetInt("QuestNumber", QuestNumber);
+            }
             
             QuestNumber = PlayerPrefs.GetInt("QuestNumber");
             //dialogueTextObject.text += "quest numbre: " + QuestNumber.ToString();
