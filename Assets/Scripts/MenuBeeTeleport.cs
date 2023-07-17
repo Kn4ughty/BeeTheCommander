@@ -22,7 +22,7 @@ public class MenuBeeTeleport : MonoBehaviour
     public GameObject ResetFloor;
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)//collider? i hardly know her!
     {
 
     if(collision.gameObject == ResetObject)
