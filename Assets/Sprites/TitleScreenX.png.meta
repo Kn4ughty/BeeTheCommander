@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1a0cda6debef4d1bb5e45b2240113fb
+guid: e53395a5308a14419a9a7cad7d87ad4b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: complete title asset fr .png_0
+      name: TitleScreenX_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 152
-        width: 888
-        height: 607
+        x: 0
+        y: 0
+        width: 1512
+        height: 1032
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d60f4242ea4bf46ca8ff04191d50b2d2
-      internalID: -1395190036
+      spriteID: 0c62d6c083d9a43cc8b1188a9d5bdb53
+      internalID: -755904035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: complete title asset fr .png_1
+      name: TitleScreenX_1
       rect:
         serializedVersion: 2
-        x: 900
-        y: 152
-        width: 888
-        height: 607
+        x: 1512
+        y: 0
+        width: 1512
+        height: 1032
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31797d0d473214dc4bcae8559790801f
-      internalID: 1426487566
+      spriteID: 62123e0afdbea4f7e9b09dbce4fb3452
+      internalID: 2080090825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: complete title asset fr .png_2
+      name: TitleScreenX_2
       rect:
         serializedVersion: 2
-        x: 1797
-        y: 152
-        width: 886
-        height: 607
+        x: 3024
+        y: 0
+        width: 1512
+        height: 1032
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ca0f8a77d673435a8543af8cc28312d
-      internalID: 142978312
+      spriteID: 9aed62cb4889344e5be760ee62259e36
+      internalID: 1794695534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: complete title asset fr .png_3
+      name: TitleScreenX_3
       rect:
         serializedVersion: 2
-        x: 2692
-        y: 152
-        width: 888
-        height: 607
+        x: 4536
+        y: 0
+        width: 1512
+        height: 1032
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d554c0974a37c4c25b4fdbd4faab9b69
-      internalID: -723764237
+      spriteID: ca0e827ca8929477d8deb4c3b5f428b3
+      internalID: 1862137164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: complete title asset fr .png_4
+      name: TitleScreenX_4
       rect:
         serializedVersion: 2
-        x: 3589
-        y: 152
-        width: 888
-        height: 607
+        x: 6048
+        y: 0
+        width: 1512
+        height: 1032
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d00aef93cec04278b4a882c3795dc30
-      internalID: 558530280
+      spriteID: 2efcdfef1de5d4bcdb46a0a4256837de
+      internalID: -1151181768
       vertices: []
       indices: 
       edges: []
@@ -220,11 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      complete title asset fr .png_0: -1395190036
-      complete title asset fr .png_1: 1426487566
-      complete title asset fr .png_2: 142978312
-      complete title asset fr .png_3: -723764237
-      complete title asset fr .png_4: 558530280
+      TitleScreenX_0: -755904035
+      TitleScreenX_1: 2080090825
+      TitleScreenX_2: 1794695534
+      TitleScreenX_3: 1862137164
+      TitleScreenX_4: -1151181768
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
