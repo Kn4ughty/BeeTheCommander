@@ -19,8 +19,10 @@ public class ResourceDisplay : MonoBehaviour
     {
         ResourceText.text = "Pollen: " + pollen;
 
-        if(Input.GetKeyDown(KeyCode.Space)){
-            pollen++;
+        if (!Input.GetKeyDown(KeyCode.Space))
+        {
+            return;
         }
+        pollen++;
     }
 }
