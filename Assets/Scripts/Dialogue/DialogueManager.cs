@@ -14,11 +14,13 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialoguePanelObject;
     public TextMeshProUGUI dialogueTextObject;
     public TextMeshProUGUI NPCNameObject;
-
     public GameObject NPCImageObject;
 
+    [Header("Buttons")]
     public GameObject continueButtonObject;
+    public GameObject buttonOptionsObject;
 
+    [Header("Dialogue resources")]
     public GameObject playerBee;
     private PlayerMovement PlayerMovementComponent;
 
@@ -53,6 +55,12 @@ public class DialogueManager : MonoBehaviour
         // And the index is not greater than the size of the array
         if (stringArrayIndex < dialogueStringArray.Length && dialogueTextObject.text == dialogueStringArray[stringArrayIndex])
             continueButtonObject.SetActive(true);
+
+            // a
+            else if(stringArrayIndex == dialogueStringArray.Length -1) // last one before the end.
+            {
+                buttonOptionsObject.SetActive(true);
+            }
         
     }
     
@@ -67,6 +75,7 @@ public class DialogueManager : MonoBehaviour
 
 
         dialoguePanelObject.SetActive(true);
+        buttonOptionsObject.SetActive(false);
         StartCoroutine(Typing());
 
         // Stop player movement
@@ -74,6 +83,8 @@ public class DialogueManager : MonoBehaviour
 
         yield return null;
     }
+
+
     public void ResetText() {
         Debug.Log("Reseting dialogue text");
         dialogueTextObject.text = "";
@@ -87,6 +98,8 @@ public class DialogueManager : MonoBehaviour
             dialogueTextObject.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
+
+
     }
 
     public void NextLine() {
