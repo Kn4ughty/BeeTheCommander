@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Pollen
+  - Wood
+  - Water
+  - Stone
   layers:
   - Default
   - TransparentFX
