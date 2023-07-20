@@ -19,6 +19,9 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject continueButtonObject;
 
+    public GameObject playerBee;
+    private PlayerMovement PlayerMovementComponent;
+
     [Header("Display Settings")]
     public float wordSpeed = 0.3f;
 
@@ -32,6 +35,7 @@ public class DialogueManager : MonoBehaviour
     public Image NPCImageComponent;
 
 
+
     public delegate void FinishedTalkingDelegate();
     public static event FinishedTalkingDelegate FinishedTalking;
 
@@ -41,6 +45,7 @@ public class DialogueManager : MonoBehaviour
     private void Start() {
         NPCImageComponent = NPCImageObject.GetComponent<Image>();
         dialoguePanelObject.SetActive(false);
+        PlayerMovementComponent = playerBee.GetComponent<PlayerMovement>();
     }
 
     private void Update() {
@@ -50,7 +55,25 @@ public class DialogueManager : MonoBehaviour
             continueButtonObject.SetActive(true);
         
     }
+    
+    // First code run.
+    public IEnumerator InteractCoroutine() {
+        Debug.Log("Started Coroutine");
 
+
+        NPCImageComponent.sprite = NPCImage;
+        NPCNameObject.text = NPCNameString;
+        ResetText();
+
+
+        dialoguePanelObject.SetActive(true);
+        StartCoroutine(Typing());
+
+        // Stop player movement
+        PlayerMovementComponent._speed = 0;
+
+        yield return null;
+    }
     public void ResetText() {
         Debug.Log("Reseting dialogue text");
         dialogueTextObject.text = "";
@@ -70,16 +93,21 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("NextLine is running");
         continueButtonObject.SetActive(false);
 
+
+
         if(stringArrayIndex < dialogueStringArray.Length -1)
         {
             stringArrayIndex++;
             dialogueTextObject.text = "";
             StartCoroutine(Typing());
         }
-        else
+        else // There are no more lines | end of talking
         {
             ResetText();
             dialoguePanelObject.SetActive(false);
+            // movement speed hardcoded cope
+            PlayerMovementComponent._speed = 10;
+
             // need to set source object isinteracterd false here
             FinishedTalking.Invoke();
         }
@@ -108,19 +136,5 @@ public class DialogueManager : MonoBehaviour
         FinishedTalking.Invoke();
     }
 
-    public IEnumerator InteractCoroutine() {
-        Debug.Log("Started Coroutine");
 
-
-        NPCImageComponent.sprite = NPCImage;
-        NPCNameObject.text = NPCNameString;
-        ResetText();
-
-
-        dialoguePanelObject.SetActive(true);
-        StartCoroutine(Typing());
-
-
-        yield return null;
-    }
 }
