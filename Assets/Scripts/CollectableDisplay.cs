@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CollectableDisplay : MonoBehaviour
 {
     // Should read data for info, but we dont have data to read yet
-    private int pollen = 0;
+    private int flower = 0;
     private int wood = 0;
     private int water = 0;
     private int stone = 0;
@@ -24,8 +24,8 @@ public class CollectableDisplay : MonoBehaviour
         if (collision.gameObject.CompareTag("Pollen"))
         {
             Destroy(collision.gameObject);
-            pollen++;
-            pollenText.text = "Pollen: " + pollen;
+            flower++;
+            pollenText.text = "Pollen: " + flower;
         }
        if (collision.gameObject.CompareTag("Wood"))
         {
