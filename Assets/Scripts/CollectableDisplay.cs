@@ -20,6 +20,7 @@ public class CollectableDisplay : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // I hate this so much whyyyy
+        // sorry ;-; -Oscar
         if (collision.gameObject.CompareTag("Pollen"))
         {
             Destroy(collision.gameObject);
