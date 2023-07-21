@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CollectableDisplay : MonoBehaviour
 {
+    // Should read data for info, but we dont have data to read yet
     private int pollen = 0;
     private int wood = 0;
     private int water = 0;
@@ -15,8 +16,10 @@ public class CollectableDisplay : MonoBehaviour
     [SerializeField] private Text waterText;
     [SerializeField] private Text stoneText;
 
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // I hate this so much whyyyy
         if (collision.gameObject.CompareTag("Pollen"))
         {
             Destroy(collision.gameObject);

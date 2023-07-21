@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*
 This code sucks
@@ -32,10 +33,23 @@ public class Interactor : MonoBehaviour
     private readonly Collider[] _colliders = new Collider[3];
     private int _numFound;
 
-    private Highlight highlight; // Declare the 'highlight' variable here
+    //private Highlight highlight; // Declare the 'highlight' variable here
     private Collider2D LastInteractable = null; // help
 
     private IInteractable _interactable;
+    private ICollectable _collectable;
+
+    // Should read data for info, but we dont have data to read yet
+    private int pollen = 0;
+    private int wood = 0;
+    private int water = 0;
+    private int stone = 0;
+
+    [Header("UI Text")]
+    [SerializeField] private Text pollenText;
+    [SerializeField] private Text woodText;
+    [SerializeField] private Text waterText;
+    [SerializeField] private Text stoneText;
 
 
     void Update()
@@ -50,9 +64,13 @@ public class Interactor : MonoBehaviour
             // Gets interactable thing
             _interactable = colliders[0].GetComponent<IInteractable>();
 
+            _collectable = colliders[0].GetComponent<ICollectable>();
+            if (_collectable != null) {
+                Debug.Log(_collectable);
+            }
             // Sets and gets the highlting variable
-            highlight = colliders[0].GetComponent<Highlight>();
-            highlight.isHighlighted = true;
+            //highlight = colliders[0].GetComponent<Highlight>();
+            //highlight.isHighlighted = true;
             _interactable.isInInteractionRange = true;
 
 
@@ -62,7 +80,11 @@ public class Interactor : MonoBehaviour
                 if (!_interactionPromptUI.IsDisplayed) _interactionPromptUI.SetUp(_interactable.InteractionPrompt, colliders[0].transform.position);
                 if (_interactionPromptUI.IsDisplayed) _interactionPromptUI.UpdatePrompt(_interactable.InteractionPrompt);
 
-                if (Input.GetKeyDown("e")) _interactable.Interact(this);
+                if (Input.GetKeyDown("e")) {
+                    _interactable.Interact(this);
+                    pollenText.text = "Pollen: " + _collectable.pollenAmount;
+
+                }
             }
             /*
             if (_interactable != null && Input.GetKeyDown("e"))
@@ -77,8 +99,8 @@ public class Interactor : MonoBehaviour
         }
         else if (LastInteractable != null) // avoids null reference exception
         {
-            highlight = LastInteractable.GetComponent<Highlight>();
-            highlight.isHighlighted = false;
+            //highlight = LastInteractable.GetComponent<Highlight>();
+            //highlight.isHighlighted = false;
             if (_interactionPromptUI.IsDisplayed) _interactionPromptUI.Close();
             
         }
