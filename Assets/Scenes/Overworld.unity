@@ -6913,10 +6913,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144f0deaacbc6468697c95e8700e6799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pollenText: {fileID: 120348777}
-  woodText: {fileID: 1625549427}
-  waterText: {fileID: 1719781625}
-  stoneText: {fileID: 1219552222}
+  pollenText: {fileID: 0}
+  woodText: {fileID: 0}
+  waterText: {fileID: 0}
+  stoneText: {fileID: 0}
 --- !u!61 &1870325178001103137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7143,7 +7143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1870325178001103135}
-  numBees: 20
+  numBees: 4
   allBees: []
   FlyLimit: {x: 14.66, y: 7.11}
   goalPos: {x: 0, y: 0}

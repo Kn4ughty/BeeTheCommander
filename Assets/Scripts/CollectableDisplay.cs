@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class CollectableDisplay : MonoBehaviour
 {
     // Should read data for info, but we dont have data to read yet
-    private int flower = 0;
-    private int wood = 0;
-    private int water = 0;
-    private int stone = 0;
+    private static int flower = 0;
+    private static int wood = 0;
+    private static int water = 0;
+    private static int stone = 0;
 
     [SerializeField] private Text pollenText;
     [SerializeField] private Text woodText;
