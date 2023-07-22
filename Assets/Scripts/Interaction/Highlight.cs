@@ -90,8 +90,8 @@ public class Highlight : MonoBehaviour
         }
 
         objectRenderer.material.color = targetColor;
-        if (targetColor == startColor)
-            transitionCoroutine = null;
+        //if (targetColor == startColor)
+        //    transitionCoroutine = null;
     }
 
 

@@ -32,7 +32,7 @@ public class HarvestInteractable : MonoBehaviour, IInteractable, ICollectable
     //private Coroutine transitionCoroutine;
 
 
-    public Color waitInteractColor;
+    public Color waitInteractColor = Color.green;
 
     private void Awake()
     {
@@ -76,7 +76,7 @@ public class HarvestInteractable : MonoBehaviour, IInteractable, ICollectable
         
         //Highlighter.highlightColour = Highlighter.startColor;
         //Highlighter.isHighlighted = false;
-        Highlighter.highlightColour = Highlighter.m_highlightColour;
+        //Highlighter.highlightColour = Highlighter.m_highlightColour;
         Highlighter.isHighlighted = false;
         
         //objectRenderer.enabled = true; // old method
