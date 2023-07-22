@@ -1325,9 +1325,11 @@ GameObject:
   - component: {fileID: 963302325}
   - component: {fileID: 963302326}
   - component: {fileID: 963302327}
-  m_Layer: 0
+  - component: {fileID: 963302329}
+  - component: {fileID: 963302328}
+  m_Layer: 6
   m_Name: Flower
-  m_TagString: Pollen
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1415,6 +1417,45 @@ CircleCollider2D:
   m_Offset: {x: 0.5253401, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &963302328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963302324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd0f02cb28c54c579daeb62e3589943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <pollenAmount>k__BackingField: 4
+  <woodAmount>k__BackingField: 0
+  <waterAmount>k__BackingField: 0
+  <stoneAmount>k__BackingField: 0
+  <InteractionPrompt>k__BackingField: Harvest Flower
+  invisibilityDuration: 5
+  promptUpdateSpeed: 1
+  waitInteractColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &963302329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963302324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f86257ee8a04ecf84bd3ad8d28c9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColour: {r: 1, g: 1, b: 1, a: 1}
+  m_highlightColour: {r: 1, g: 1, b: 1, a: 0}
+  transitionTime: 1
+  highlightBrightness: 1
+  isHighlighted: 0
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  targetColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1017612479
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,6 +3012,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8032078936961655271, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
+      propertyPath: woodText
+      value: 
+      objectReference: {fileID: 1625549427}
+    - target: {fileID: 8032078936961655271, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
+      propertyPath: stoneText
+      value: 
+      objectReference: {fileID: 1219552222}
+    - target: {fileID: 8032078936961655271, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
+      propertyPath: waterText
+      value: 
+      objectReference: {fileID: 1719781625}
+    - target: {fileID: 8032078936961655271, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
+      propertyPath: pollenText
+      value: 
+      objectReference: {fileID: 120348777}
     - target: {fileID: 8032078936961655271, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
       propertyPath: _interactionPromptUI
       value: 
