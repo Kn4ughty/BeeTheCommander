@@ -40,10 +40,10 @@ public class Interactor : MonoBehaviour
     private ICollectable _collectable;
 
     // Should read data for info, but we dont have data to read yet
-    private int pollen = 0;
-    private int wood = 0;
-    private int water = 0;
-    private int stone = 0;
+    // private int pollen = 0;
+    // private int wood = 0;
+    // private int water = 0;
+    // private int stone = 0;
 
     [Header("UI Text")]
     [SerializeField] private Text pollenText;
@@ -83,6 +83,9 @@ public class Interactor : MonoBehaviour
                 if (Input.GetKeyDown("e")) {
                     _interactable.Interact(this);
                     pollenText.text = "Pollen: " + _collectable.pollenAmount;
+                    woodText.text = "Wood: " + _collectable.woodAmount;
+                    waterText.text = "Water: " + _collectable.waterAmount;
+                    stoneText.text = "Stone: " + _collectable.stoneAmount;
 
                 }
             }

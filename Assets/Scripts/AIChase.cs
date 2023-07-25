@@ -31,4 +31,24 @@ public class AIChase : MonoBehaviour
 
         TakeDamage(damageAmount);
     }
+
+    /*
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("entered collision.");
+        if (collision.gameObject.CompareTag("Player")) {
+            healthBar.takeDamage(damageAmount);
+        }
+    }
+    */
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        //Debug.Log("Collsion:" + collision);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            healthBar.takeDamage(damageAmount);
+        }
+
+    }
+
 }

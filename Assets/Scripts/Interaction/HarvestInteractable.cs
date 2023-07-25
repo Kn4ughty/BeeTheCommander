@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Highlight))]
 public class HarvestInteractable : MonoBehaviour, IInteractable, ICollectable
 {
+    // For some reason in order to make the values accesable 
+    // to the inspector it needs to have that jargon out front
+
     //[Header("Resource amounts")] // unity cries
     [field: SerializeField] public int pollenAmount { get; set; } = 0;
     [field: SerializeField] public int woodAmount { get; set; } = 0;
@@ -55,10 +58,10 @@ public class HarvestInteractable : MonoBehaviour, IInteractable, ICollectable
     {
         isInteracted = true;
         
-        Highlighter.highlightColour = waitInteractColor;
+        //Highlighter.highlightColour = waitInteractColor;
         // this is dumb, can be fixed by just running the function. but it works :/
-        Highlighter.isHighlighted = false;
-        Highlighter.isHighlighted = true;
+        //Highlighter.isHighlighted = false;
+        //Highlighter.isHighlighted = true;
         //objectRenderer.enabled = false; // old method
         
 
@@ -77,7 +80,7 @@ public class HarvestInteractable : MonoBehaviour, IInteractable, ICollectable
         //Highlighter.highlightColour = Highlighter.startColor;
         //Highlighter.isHighlighted = false;
         //Highlighter.highlightColour = Highlighter.m_highlightColour;
-        Highlighter.isHighlighted = false;
+        //Highlighter.isHighlighted = false;
         
         //objectRenderer.enabled = true; // old method
         isInteracted = false;
