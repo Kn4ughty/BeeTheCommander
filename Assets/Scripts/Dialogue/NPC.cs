@@ -14,6 +14,7 @@ public class NPC : MonoBehaviour, IInteractable
     public string NPCNameString = "NPCName";
     public string[] dialogueStringArray = {"lorem", "ipsum"};
     public Sprite NPCImage;
+    public bool hasOptionButtons = false;
 
     public DialogueManager DialogueManager;
 
@@ -45,6 +46,7 @@ public class NPC : MonoBehaviour, IInteractable
         DialogueManager.NPCNameString = NPCNameString;
         DialogueManager.dialogueStringArray = dialogueStringArray;
         DialogueManager.NPCImage = NPCImage;
+        DialogueManager.hasOptionButtons = hasOptionButtons; // bool
 
         StartCoroutine(DialogueManager.InteractCoroutine());
         

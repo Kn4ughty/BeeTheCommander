@@ -40,12 +40,14 @@ public class PlayerMovement : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    // Update is called once per frame
+    // Called once per frame, we have the look at mouse tghing here to avoid jitter
     void Update()
     {
         mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-
         LookAtMouse();
+    }
+    void FixedUpdate()
+    {
         Move();
     }
 

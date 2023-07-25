@@ -35,6 +35,8 @@ public class DialogueManager : MonoBehaviour
     public Sprite NPCImage;
     [HideInInspector]
     public Image NPCImageComponent;
+    [HideInInspector]
+    public bool hasOptionButtons = false; // Set false in case forgorten
 
 
 
@@ -57,7 +59,7 @@ public class DialogueManager : MonoBehaviour
             continueButtonObject.SetActive(true);
 
             // a
-            else if(stringArrayIndex == dialogueStringArray.Length -1) // last one before the end.
+            else if(stringArrayIndex == dialogueStringArray.Length -1 && hasOptionButtons) // last one before the end.
             {
                 buttonOptionsObject.SetActive(true);
             }
@@ -129,7 +131,7 @@ public class DialogueManager : MonoBehaviour
     public void Option(bool isAccepted) {
         if (isAccepted) {
             int QuestNumber = PlayerPrefs.GetInt("QuestNumber");
-            if(QuestNumber == 0)
+            if (QuestNumber == 0)
             {
                 PlayerPrefs.SetInt("QuestNumber", 1);
             }
@@ -143,8 +145,12 @@ public class DialogueManager : MonoBehaviour
             //dialogueTextObject.text += "quest numbre: " + QuestNumber.ToString();
             Debug.Log(QuestNumber);
         }
+        else {
+            Debug.Log("Declined");
+        }
 
         ResetText();
+        PlayerMovementComponent._speed = 10;
         dialoguePanelObject.SetActive(false);
         FinishedTalking.Invoke();
     }

@@ -29,6 +29,6 @@ public class AIChase : MonoBehaviour
             currentHealth = 0;
         }
 
-        healthBar.TakeDamage(damageAmount);
+        TakeDamage(damageAmount);
     }
 }
