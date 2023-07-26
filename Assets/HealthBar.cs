@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class HealthBar : MonoBehaviour
         {
             currentHealth = 0;
             Debug.Log("Player died!!! 💀");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         UpdateHealthBar();
     }
