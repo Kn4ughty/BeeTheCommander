@@ -82,11 +82,19 @@ public class Interactor : MonoBehaviour
 
                 if (Input.GetKeyDown("e")) {
                     _interactable.Interact(this);
-                    pollenText.text = "Pollen: " + _collectable.pollenAmount;
-                    woodText.text = "Wood: " + _collectable.woodAmount;
-                    waterText.text = "Water: " + _collectable.waterAmount;
-                    stoneText.text = "Stone: " + _collectable.stoneAmount;
 
+                    pollenText.text = "Pollen: " + _collectable.pollenAmount;
+                    PlayerPrefs.SetInt("PollenAmount", _collectable.pollenAmount);
+
+                    woodText.text = "Wood: " + _collectable.woodAmount;
+                    PlayerPrefs.SetInt("WoodAmount", _collectable.woodAmount);
+
+                    waterText.text = "Water: " + _collectable.waterAmount;
+                    PlayerPrefs.SetInt("WaterAmount", _collectable.waterAmount);
+
+                    stoneText.text = "Stone: " + _collectable.stoneAmount;
+                    PlayerPrefs.SetInt("StoneAmount", _collectable.stoneAmount);
+                    // StoneAmount? I hardly know her! 
                 }
             }
             /*

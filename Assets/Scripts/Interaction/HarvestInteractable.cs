@@ -16,7 +16,7 @@ public class HarvestInteractable : MonoBehaviour, IInteractable, ICollectable
 
     //[Header("Ui prompts")]
     [field: SerializeField] public string InteractionPrompt { get; set; } = "Harvest Wood";
-    [field: SerializeField] public string m_InteractionPrompt => "Havest Wood";
+    public string m_InteractionPrompt;
     public string WaitingPrompt => "Harvested, please wait for : ";
 
     //[Header("Other data")]
@@ -43,6 +43,7 @@ public class HarvestInteractable : MonoBehaviour, IInteractable, ICollectable
         objectRenderer = GetComponent<Renderer>();
         Highlighter = gameObject.GetComponent<Highlight>();
         Debug.Log("Components Ready To Be Modified");
+        m_InteractionPrompt = InteractionPrompt;
     }
 
     public bool Interact(Interactor interactor)
@@ -62,7 +63,7 @@ public class HarvestInteractable : MonoBehaviour, IInteractable, ICollectable
         // this is dumb, can be fixed by just running the function. but it works :/
         //Highlighter.isHighlighted = false;
         //Highlighter.isHighlighted = true;
-        //objectRenderer.enabled = false; // old method
+        objectRenderer.enabled = false; // old method, but works
         
 
         // Wait for the specified duration
@@ -82,7 +83,7 @@ public class HarvestInteractable : MonoBehaviour, IInteractable, ICollectable
         //Highlighter.highlightColour = Highlighter.m_highlightColour;
         //Highlighter.isHighlighted = false;
         
-        //objectRenderer.enabled = true; // old method
+        objectRenderer.enabled = true; // old method
         isInteracted = false;
 
         InteractionPrompt = m_InteractionPrompt;
