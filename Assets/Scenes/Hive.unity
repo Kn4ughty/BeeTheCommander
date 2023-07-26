@@ -187,6 +187,7 @@ MonoBehaviour:
   - Why did you think talking to me would work?
   - You silly billy
   NPCImage: {fileID: 21300000, guid: 1326f16b3d0434896b242aef5978b9c6, type: 3}
+  hasOptionButtons: 0
   DialogueManager: {fileID: 1579301796}
   isInteracted: 0
 --- !u!212 &209703634
@@ -1209,9 +1210,9 @@ GameObject:
   - component: {fileID: 1242750532}
   - component: {fileID: 1242750531}
   - component: {fileID: 1242750534}
-  - component: {fileID: 1242750537}
   - component: {fileID: 1242750536}
   - component: {fileID: 1242750535}
+  - component: {fileID: 1242750537}
   m_Layer: 6
   m_Name: Queen Bee NPC
   m_TagString: Obstacle
@@ -1326,6 +1327,7 @@ MonoBehaviour:
     resources we need to rebuild.
   - Now be quick! Fetch me 10 logs!
   NPCImage: {fileID: 21300000, guid: 77a19c51beeeb4e80a50bbf6c97d53bf, type: 3}
+  hasOptionButtons: 0
   DialogueManager: {fileID: 1579301796}
   isInteracted: 0
 --- !u!114 &1242750536
@@ -1347,8 +1349,8 @@ MonoBehaviour:
   isHighlighted: 0
   startColor: {r: 0, g: 0, b: 0, a: 0}
   targetColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!70 &1242750537
-CapsuleCollider2D:
+--- !u!68 &1242750537
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1360,9 +1362,31 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.50164276, y: 4.3006964}
-  m_Size: {x: 15.659216, y: 15.659216}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.219351, y: 6.259836}
+  - {x: -1.6468865, y: 5.890949}
+  - {x: -2.0153942, y: 4.332766}
+  - {x: -3.1708474, y: 3.915676}
+  - {x: -4.202541, y: 2.6359005}
+  - {x: -4.677677, y: 1.2585843}
+  - {x: -4.153409, y: -0.5840701}
+  - {x: -3.7765603, y: -0.67092085}
+  - {x: -2.2449994, y: -1.277085}
+  - {x: 0.104213506, y: -1.495894}
+  - {x: 2.6573763, y: -1.0296364}
+  - {x: 4.113934, y: -0.43633604}
+  - {x: 4.2545276, y: 0.98068213}
+  - {x: 4.1533523, y: 2.7268076}
+  - {x: 3.2107902, y: 3.70301}
+  - {x: 1.785847, y: 4.0710745}
+  - {x: 1.5262406, y: 5.691143}
+  - {x: 0.37545013, y: 6.1977158}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1001 &1320481987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1843,6 +1867,7 @@ MonoBehaviour:
   NPCNameString: 
   NPCImage: {fileID: 0}
   NPCImageComponent: {fileID: 0}
+  hasOptionButtons: 0
 --- !u!1 &1582181144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,6 +2407,129 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817842721}
   m_CullTransparentMesh: 1
+--- !u!1 &1890635142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1890635144}
+  - component: {fileID: 1890635143}
+  - component: {fileID: 1890635145}
+  m_Layer: 0
+  m_Name: Hiveborder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1890635143
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890635142}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -100
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1890635144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890635142}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1890635145
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890635142}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.37502566, y: 0.26026922}
+  - {x: 0.37977064, y: 0.26002777}
+  - {x: 0.31950867, y: 0.259494}
+  - {x: -0.18808404, y: 0.25852868}
+  - {x: -0.2621626, y: 0.26017126}
+  - {x: -0.3783138, y: 0.25767374}
+  - {x: -0.37479648, y: -0.14331748}
+  - {x: -0.39578786, y: -0.17976224}
+  - {x: -0.26198563, y: -0.18222757}
+  - {x: -0.37588847, y: -0.16311406}
+  - {x: 0.007873391, y: -0.16742867}
+  - {x: 0.103354044, y: -0.16512387}
+  - {x: 0.19075087, y: -0.1664663}
+  - {x: 0.41672015, y: -0.1800273}
+  - {x: 0.50000006, y: 0}
+  - {x: 0.42234904, y: -0.16562736}
+  - {x: 0.3742328, y: -0.1591103}
+  - {x: 0.37521335, y: 0.25831157}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &2044390958
 GameObject:
   m_ObjectHideFlags: 0
