@@ -16,6 +16,17 @@ public class CollectableDisplay : MonoBehaviour
     [SerializeField] private Text waterText;
     [SerializeField] private Text stoneText;
 
+    private int bagel = 0;
+
+
+    private void Awake() {
+        pollenText.text = "Pollen: " + PlayerPrefs.GetInt("PollenAmount");
+        woodText.text = "Wood: " + PlayerPrefs.GetInt("WoodAmount");
+        stoneText.text = "Stone: " + PlayerPrefs.GetInt("StoneAmount");
+        waterText.text = "Water: " + PlayerPrefs.GetInt("WaterAmount");
+    }
+
+
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,26 +35,31 @@ public class CollectableDisplay : MonoBehaviour
         if (collision.gameObject.CompareTag("Pollen"))
         {
             Destroy(collision.gameObject);
-            flower++;
-            pollenText.text = "Pollen: " + flower;
+
+            bagel = PlayerPrefs.GetInt("PollenAmount") + 1;
+            pollenText.text = "Pollen: " + bagel;
+            PlayerPrefs.SetInt("PollenAmount", bagel);
         }
        if (collision.gameObject.CompareTag("Wood"))
         {
             Destroy(collision.gameObject);
-            wood++;
-            woodText.text = "Wood: " + wood;
+            bagel = PlayerPrefs.GetInt("WoodAmount") + 1;
+            woodText.text = "Wood: " + bagel;
+            PlayerPrefs.SetInt("WoodAmount", bagel);
         }
         if (collision.gameObject.CompareTag("Water"))
         {
             Destroy(collision.gameObject);
-            water++;
-            waterText.text = "Water: " + water;
+            bagel = PlayerPrefs.GetInt("WaterAmount") + 1;
+            waterText.text = "Water: " + bagel;
+            PlayerPrefs.SetInt("WaterAmount", bagel);
         }
         if (collision.gameObject.CompareTag("Stone"))
         {
             Destroy(collision.gameObject);
-            stone++;
-            stoneText.text = "Stone: " + stone;
+            bagel = PlayerPrefs.GetInt("StoneAmount") + 1;
+            stoneText.text = "Stone: " + bagel;
+            PlayerPrefs.SetInt("StoneAmount", bagel);
         }
     }
 }
