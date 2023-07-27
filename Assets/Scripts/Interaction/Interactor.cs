@@ -39,6 +39,8 @@ public class Interactor : MonoBehaviour
     private IInteractable _interactable;
     private ICollectable _collectable;
 
+    private int bagel = 0;
+
     // Should read data for info, but we dont have data to read yet
     // private int pollen = 0;
     // private int wood = 0;
@@ -66,7 +68,7 @@ public class Interactor : MonoBehaviour
 
             _collectable = colliders[0].GetComponent<ICollectable>();
             if (_collectable != null) {
-                Debug.Log(_collectable);
+                //shwangle
             }
             // Sets and gets the highlting variable
             //highlight = colliders[0].GetComponent<Highlight>();
@@ -83,17 +85,22 @@ public class Interactor : MonoBehaviour
                 if (Input.GetKeyDown("e")) {
                     _interactable.Interact(this);
 
-                    pollenText.text = "Pollen: " + _collectable.pollenAmount;
-                    PlayerPrefs.SetInt("PollenAmount", _collectable.pollenAmount);
+                    // bagel bagel
+                    bagel = _collectable.pollenAmount + PlayerPrefs.GetInt("pollenAmount");
+                    pollenText.text = "Pollen: " + bagel;
+                    PlayerPrefs.SetInt("PollenAmount", bagel);
 
-                    woodText.text = "Wood: " + _collectable.woodAmount;
+                    bagel = _collectable.woodAmount + PlayerPrefs.GetInt("WoodAmount");
+                    woodText.text = "Wood: " + bagel;
                     PlayerPrefs.SetInt("WoodAmount", _collectable.woodAmount);
 
-                    waterText.text = "Water: " + _collectable.waterAmount;
-                    PlayerPrefs.SetInt("WaterAmount", _collectable.waterAmount);
+                    bagel = _collectable.waterAmount + PlayerPrefs.GetInt("WaterAmount");
+                    waterText.text = "Water: " + bagel;
+                    PlayerPrefs.SetInt("WaterAmount", bagel);
 
-                    stoneText.text = "Stone: " + _collectable.stoneAmount;
-                    PlayerPrefs.SetInt("StoneAmount", _collectable.stoneAmount);
+                    bagel = _collectable.stoneAmount + PlayerPrefs.GetInt("StoneAmount");
+                    pollenText.text = "Stone: " + bagel;
+                    PlayerPrefs.SetInt("StoneAmount", bagel);
                     // StoneAmount? I hardly know her! 
                 }
             }
