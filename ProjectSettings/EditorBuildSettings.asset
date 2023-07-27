@@ -14,10 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hive.unity
     guid: e7d06ce4d38394a768a25a699be49aae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Hive V2.unity
     guid: 3072c3941f2de4f779ec950848b82575
-  - enabled: 1
-    path: Assets/Scenes/Boid Land.unity
-    guid: d7b18a727234c46968237e315a5c824c
   m_configObjects: {}
