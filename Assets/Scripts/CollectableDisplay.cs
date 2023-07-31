@@ -32,6 +32,7 @@ public class CollectableDisplay : MonoBehaviour
     {
         // I hate this so much whyyyy
         // sorry ;-; -Oscar
+        // i made it worse :D - Naught
         if (collision.gameObject.CompareTag("Pollen"))
         {
             Destroy(collision.gameObject);

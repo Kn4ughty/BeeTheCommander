@@ -20,6 +20,7 @@ public class FlockManager : MonoBehaviour
     public float neighbourDistance;
     [Range(1.0f, 5.0f)]
     public float rotationSpeed;
+    public bool targetPositionRandom = false;
 
     
     private Camera mainCamera;
@@ -42,14 +43,16 @@ public class FlockManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        goalPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        /*
-        if (Random.Range(0, 10000) < 10)
-        {
-            goalPos = new Vector2(transform.position.x, transform.position.y) + new Vector2(Random.Range(-FlyLimit.x, FlyLimit.x), 
-                                                                Random.Range(-FlyLimit.y, FlyLimit.y));
+        if(targetPositionRandom) {
+            // Set target position randomly
+            if (Random.Range(0, 10000) < 10) {
+                goalPos = new Vector2(transform.position.x, transform.position.y) + new Vector2(Random.Range(-FlyLimit.x, FlyLimit.x), 
+                                                                                                Random.Range(-FlyLimit.y, FlyLimit.y));
+            } 
         }
-        */
+        else {
+            goalPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        }
     }
 
     private void OnDrawGizmosSelected() {
