@@ -62,6 +62,8 @@ public class DialogueManager : MonoBehaviour
             else if(stringArrayIndex == dialogueStringArray.Length -1 && hasOptionButtons) // last one before the end.
             {
                 buttonOptionsObject.SetActive(true);
+                continueButtonObject.SetActive(false);
+                Debug.Log("wahwahahahahahahahahahahahahgex gex");
             }
         
     }
@@ -108,7 +110,11 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("NextLine is running");
         continueButtonObject.SetActive(false);
 
-
+        if(stringArrayIndex == dialogueStringArray.Length -1 && hasOptionButtons) // last one before the end.
+        {
+            buttonOptionsObject.SetActive(true);
+            
+        }
 
         if(stringArrayIndex < dialogueStringArray.Length -1)
         {
