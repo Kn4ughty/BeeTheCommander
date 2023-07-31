@@ -63,7 +63,6 @@ public class DialogueManager : MonoBehaviour
             {
                 buttonOptionsObject.SetActive(true);
             }
-        
     }
     
     // First code run.
