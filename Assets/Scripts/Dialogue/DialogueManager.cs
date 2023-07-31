@@ -59,7 +59,7 @@ public class DialogueManager : MonoBehaviour
             continueButtonObject.SetActive(true);
 
             // a
-            else if(stringArrayIndex == dialogueStringArray.Length -1 && hasOptionButtons) // last one before the end.
+            if(stringArrayIndex == dialogueStringArray.Length -1 && hasOptionButtons) // last one before the end.
             {
                 buttonOptionsObject.SetActive(true);
                 continueButtonObject.SetActive(false);
