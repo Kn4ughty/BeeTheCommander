@@ -131,12 +131,10 @@ public class DialogueManager : MonoBehaviour
     public void Option(bool isAccepted) {
         if (isAccepted) {
             int QuestNumber = PlayerPrefs.GetInt("QuestNumber");
-            if (QuestNumber == 0)
-            {
+            if (QuestNumber == 0) {
                 PlayerPrefs.SetInt("QuestNumber", 1);
             }
-            else
-            {
+            else {
                 QuestNumber = QuestNumber + 1;
                 PlayerPrefs.SetInt("QuestNumber", QuestNumber);
             }
