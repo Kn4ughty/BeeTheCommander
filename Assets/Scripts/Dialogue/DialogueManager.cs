@@ -44,6 +44,8 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public string SelectedResource;
     [HideInInspector]
+    public string SelectedResourceNum;
+    [HideInInspector]
     public int SelectedResourceAmount;
     private bool schamble = false;
     private bool swhimble = true;
@@ -71,15 +73,21 @@ public class DialogueManager : MonoBehaviour
             {
                 buttonOptionsObject.SetActive(true);
                 continueButtonObject.SetActive(false);
-                SelectedResource = resourceTypes[Random.Range(0, 3)];
+                SelectedResourceNum = Random.Range(0, 3);
+                SelectedResource = resourceTypes[SelectedResourceNum];
                 SelectedResourceAmount = Random.Range(5, 20);
                 // result : Fetch me 15 water.
                 requestString = "Fetch me " + SelectedResourceAmount + " " + SelectedResource;
                 // to do write this to playerprefs.
 
                 dialogueStringArray[stringArrayIndex] = requestString;
-                if (schamble && swhimble) {
+                if (schamble && swhimble) { // deal with the names
+                    // the variable things are so that this only runs once and not every frame
+                    // first one is is when text reset
+                    // swimble is when thing. Idk this works cope
                     dialogueTextObject.text = requestString;
+                    PlayerPrefs.SetInt("QuestResource", SelectedResourceNum);
+                    PlayerPrefs.SetInt("QuestResourceAmount", SelectedResourceAmount);
                     swhimble = false;
                 }
             }
