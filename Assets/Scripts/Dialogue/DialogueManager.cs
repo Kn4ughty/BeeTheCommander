@@ -39,6 +39,14 @@ public class DialogueManager : MonoBehaviour
     public bool hasOptionButtons = false; // Set false in case forgorten
 
 
+    private string[] resourceTypes = {"logs", "pollen", "stone", "water"};
+    private string requestString;
+    [HideInInspector]
+    public string SelectedResource;
+    [HideInInspector]
+    public int SelectedResourceAmount;
+    private bool schamble = false;
+    private bool swhimble = true;
 
     public delegate void FinishedTalkingDelegate();
     public static event FinishedTalkingDelegate FinishedTalking;
@@ -63,7 +71,17 @@ public class DialogueManager : MonoBehaviour
             {
                 buttonOptionsObject.SetActive(true);
                 continueButtonObject.SetActive(false);
-                Debug.Log("wahwahahahahahahahahahahahahgex gex");
+                SelectedResource = resourceTypes[Random.Range(0, 3)];
+                SelectedResourceAmount = Random.Range(5, 20);
+                // result : Fetch me 15 water.
+                requestString = "Fetch me " + SelectedResourceAmount + " " + SelectedResource;
+                // to do write this to playerprefs.
+
+                dialogueStringArray[stringArrayIndex] = requestString;
+                if (schamble && swhimble) {
+                    dialogueTextObject.text = requestString;
+                    swhimble = false;
+                }
             }
     }
     
@@ -80,6 +98,7 @@ public class DialogueManager : MonoBehaviour
         dialoguePanelObject.SetActive(true);
         buttonOptionsObject.SetActive(false);
         StartCoroutine(Typing());
+        schamble = true;
 
         // Stop player movement
         PlayerMovementComponent._speed = 0;
@@ -89,6 +108,7 @@ public class DialogueManager : MonoBehaviour
 
 
     public void ResetText() {
+        schamble = false;
         Debug.Log("Reseting dialogue text");
         dialogueTextObject.text = "";
         stringArrayIndex = 0;
@@ -109,17 +129,13 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("NextLine is running");
         continueButtonObject.SetActive(false);
 
-        if(stringArrayIndex == dialogueStringArray.Length -1 && hasOptionButtons) // last one before the end.
-        {
-            buttonOptionsObject.SetActive(true);
-            
-        }
 
         if(stringArrayIndex < dialogueStringArray.Length -1)
         {
             stringArrayIndex++;
             dialogueTextObject.text = "";
             StartCoroutine(Typing());
+            
         }
         else // There are no more lines | end of talking
         {

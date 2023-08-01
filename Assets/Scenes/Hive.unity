@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0687e291f274370816cfb0dd87cbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCNameString: Woody, Wise Oak Sage
+  NPCNameString: Logs
   dialogueStringArray:
   - I am a pile of logs
   - Why did you think talking to me would work?
@@ -3487,6 +3487,8 @@ MonoBehaviour:
   NPCImage: {fileID: 0}
   NPCImageComponent: {fileID: 0}
   hasOptionButtons: 0
+  SelectedResource: 
+  SelectedResourceAmount: 0
 --- !u!1 &1582181144
 GameObject:
   m_ObjectHideFlags: 0
