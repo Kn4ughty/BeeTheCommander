@@ -4,9 +4,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-
 // For this code, i have decided to use highly descriptive,
 // but long variable names to make the code easier to understand
+// Update: i gave up on this lmao
+// private bool schamble = false; private bool swhimble = true;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public string SelectedResource;
     [HideInInspector]
-    public string SelectedResourceNum;
+    public int SelectedResourceNum;
     [HideInInspector]
     public int SelectedResourceAmount;
     private bool schamble = false;
