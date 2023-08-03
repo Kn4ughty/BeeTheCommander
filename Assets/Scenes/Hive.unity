@@ -2718,12 +2718,14 @@ MonoBehaviour:
   dialogueStringArray:
   - Ah, greetings, young one, you've finally arrived! I need you to amass the bees
     to rebuild the hive.
+  - I have dementia!
   - Our hive needs worker bees to gather nectar and pollen from the flowers, to repair
     the broken chambers, and to rebuild our population. We need to strengthen our
     numbers and ensure the survival of our species.
   - First, I will teach you the ways of gathering nectar and pollen efficiently.
     You'll learn to navigate the meadow, avoid predators, and bring back the vital
     resources we need to rebuild.
+  - Now be quick! Fetch me 10 logs!
   NPCImage: {fileID: 21300000, guid: 77a19c51beeeb4e80a50bbf6c97d53bf, type: 3}
   hasOptionButtons: 1
   DialogueManager: {fileID: 1579301796}
@@ -3522,7 +3524,6 @@ MonoBehaviour:
   NPCImageComponent: {fileID: 0}
   hasOptionButtons: 0
   SelectedResource: 
-  SelectedResourceNum: 0
   SelectedResourceAmount: 0
 --- !u!1 &1582181144
 GameObject:
