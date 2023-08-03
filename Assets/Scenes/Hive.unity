@@ -2725,7 +2725,7 @@ MonoBehaviour:
   - First, I will teach you the ways of gathering nectar and pollen efficiently.
     You'll learn to navigate the meadow, avoid predators, and bring back the vital
     resources we need to rebuild.
-  - Now be quick! Fetch me 10 logs!
+  - 'Now be quick! '
   NPCImage: {fileID: 21300000, guid: 77a19c51beeeb4e80a50bbf6c97d53bf, type: 3}
   hasOptionButtons: 1
   DialogueManager: {fileID: 1579301796}
@@ -3425,7 +3425,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1578256136
 MonoBehaviour:
@@ -3524,6 +3524,7 @@ MonoBehaviour:
   NPCImageComponent: {fileID: 0}
   hasOptionButtons: 0
   SelectedResource: 
+  SelectedResourceNum: 0
   SelectedResourceAmount: 0
 --- !u!1 &1582181144
 GameObject:

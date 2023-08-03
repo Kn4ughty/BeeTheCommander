@@ -74,20 +74,29 @@ public class DialogueManager : MonoBehaviour
             {
                 buttonOptionsObject.SetActive(true);
                 continueButtonObject.SetActive(false);
-                SelectedResourceNum = Random.Range(0, 3);
-                SelectedResource = resourceTypes[SelectedResourceNum];
-                SelectedResourceAmount = Random.Range(5, 20);
-                // result : Fetch me 15 water.
-                requestString = "Fetch me " + SelectedResourceAmount + " " + SelectedResource;
-                // to do write this to playerprefs.
+
 
                 dialogueStringArray[stringArrayIndex] = requestString;
                 if (schamble && swhimble) { // deal with the names
                     // the variable things are so that this only runs once and not every frame
                     // first one is is when text reset
                     // swimble is when thing. Idk this works cope
+
+                    SelectedResourceNum = Random.Range(0, 3);
+                    SelectedResource = resourceTypes[SelectedResourceNum];
+                    SelectedResourceAmount = Random.Range(5, 20);
+                    // result : Fetch me 15 water.
+                    requestString = "Be quick! Fetch me " + SelectedResourceAmount + " " + SelectedResource;
+                    // to do write this to playerprefs.
+                    Debug.Log("Swambled");
                     dialogueTextObject.text = requestString;
                     swhimble = false;
+
+                    Debug.Log(SelectedResource);
+                    Debug.Log(SelectedResourceAmount);
+
+                    // problem you can increase quest number by just talking over and over
+                    
                 }
             }
             //This is a check if you have resources for the quest, and then removes them.
