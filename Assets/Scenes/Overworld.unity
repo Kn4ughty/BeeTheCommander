@@ -11735,6 +11735,9 @@ MonoBehaviour:
   NPCImage: {fileID: 0}
   NPCImageComponent: {fileID: 0}
   hasOptionButtons: 0
+  SelectedResource: 
+  SelectedResourceNum: 0
+  SelectedResourceAmount: 0
 --- !u!4 &401422201
 Transform:
   m_ObjectHideFlags: 0
@@ -18094,7 +18097,7 @@ MonoBehaviour:
   - Glory To The Queen.
   NPCImage: {fileID: 539015919, guid: 7c5d6176047cd4197b0febf2dbe9d750, type: 3}
   hasOptionButtons: 0
-  DialogueManager: {fileID: 0}
+  DialogueManager: {fileID: 401422200}
   isInteracted: 0
 --- !u!114 &779144714
 MonoBehaviour:
@@ -19406,7 +19409,7 @@ MonoBehaviour:
   - Take as much as you like
   NPCImage: {fileID: 77586177, guid: 7c5d6176047cd4197b0febf2dbe9d750, type: 3}
   hasOptionButtons: 0
-  DialogueManager: {fileID: 0}
+  DialogueManager: {fileID: 401422200}
   isInteracted: 0
 --- !u!114 &872608346
 MonoBehaviour:
@@ -26394,7 +26397,7 @@ MonoBehaviour:
   - Are you made of wood?
   NPCImage: {fileID: 238804959, guid: 7c5d6176047cd4197b0febf2dbe9d750, type: 3}
   hasOptionButtons: 0
-  DialogueManager: {fileID: 0}
+  DialogueManager: {fileID: 401422200}
   isInteracted: 0
 --- !u!114 &1360489069
 MonoBehaviour:
@@ -34666,7 +34669,7 @@ MonoBehaviour:
   - Glory To The Queen.
   NPCImage: {fileID: -1391536463, guid: 7c5d6176047cd4197b0febf2dbe9d750, type: 3}
   hasOptionButtons: 0
-  DialogueManager: {fileID: 0}
+  DialogueManager: {fileID: 401422200}
   isInteracted: 0
 --- !u!61 &4067545701819245337
 BoxCollider2D:

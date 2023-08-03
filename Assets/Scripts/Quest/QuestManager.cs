@@ -9,7 +9,7 @@ public class QuestManager : MonoBehaviour
     public GameObject hive3;
 
 
-    int QuestNumber = PlayerPrefs.GetInt("QuestNumber");
+    int QuestNumber; // =PlayerPrefs.GetInt("QuestNumber");
 
     // Call this function whenever the variable is set to a new value
     void Start()
