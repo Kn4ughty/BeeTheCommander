@@ -8,8 +8,8 @@ public class QuestManager : MonoBehaviour
     public GameObject hive2;
     public GameObject hive3;
 
-
-    int QuestNumber = PlayerPrefs.GetInt("QuestNumber");
+    // Make QuestNumber public and static
+    public static int QuestNumber = 1;
 
     // Call this function whenever the variable is set to a new value
     void Update()

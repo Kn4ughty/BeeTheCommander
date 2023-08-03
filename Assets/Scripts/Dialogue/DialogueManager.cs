@@ -39,7 +39,10 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public bool hasOptionButtons = false; // Set false in case forgorten
 
-
+    private ICollectable pollenInstance;
+    private ICollectable woodInstance;
+    private ICollectable stoneInstance;
+    private ICollectable waterInstance;
     private string[] resourceTypes = {"logs", "pollen", "stone", "water"};
     private string requestString;
     [HideInInspector]
@@ -54,16 +57,24 @@ public class DialogueManager : MonoBehaviour
     public delegate void FinishedTalkingDelegate();
     public static event FinishedTalkingDelegate FinishedTalking;
 
-
     private int stringArrayIndex = 0;
 
     private void Start() {
         NPCImageComponent = NPCImageObject.GetComponent<Image>();
         dialoguePanelObject.SetActive(false);
         PlayerMovementComponent = playerBee.GetComponent<PlayerMovement>();
+        pollenInstance = GetComponent<ICollectable>();
+        woodInstance = GetComponent<ICollectable>();
+        stoneInstance = GetComponent<ICollectable>();
+        waterInstance = GetComponent<ICollectable>();
+        int pollen = pollenInstance.pollenAmount;
+        int wood = woodInstance.woodAmount;
+        int stone = stoneInstance.stoneAmount;
+        int water = waterInstance.waterAmount;
     }
 
-    private void Update() {
+    private void Update()
+    {
         // If the text on screen matches the stored text, turn on the continue button
         // And the index is not greater than the size of the array
         if (stringArrayIndex < dialogueStringArray.Length && dialogueTextObject.text == dialogueStringArray[stringArrayIndex])
@@ -91,6 +102,11 @@ public class DialogueManager : MonoBehaviour
                     PlayerPrefs.SetInt("QuestResourceAmount", SelectedResourceAmount);
                     swhimble = false;
                 }
+            }
+            //This is a check if you have resources for the quest, and then removes them.
+            if ()
+            {
+
             }
     }
     
