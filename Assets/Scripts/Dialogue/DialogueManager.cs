@@ -72,11 +72,10 @@ public class DialogueManager : MonoBehaviour
             // a
             if(stringArrayIndex == dialogueStringArray.Length -1 && hasOptionButtons) // last one before the end.
             {
-                buttonOptionsObject.SetActive(true);
-                continueButtonObject.SetActive(false);
-
-
-                dialogueStringArray[stringArrayIndex] = requestString;
+                if (isQuestCompleted()) {
+                    buttonOptionsObject.SetActive(true);
+                    continueButtonObject.SetActive(false);
+                    dialogueStringArray[stringArrayIndex] = requestString;
                 if (schamble && swhimble) { // deal with the names
                     // the variable things are so that this only runs once and not every frame
                     // first one is is when text reset
@@ -96,8 +95,20 @@ public class DialogueManager : MonoBehaviour
                     Debug.Log(SelectedResourceAmount);
 
                     // problem you can increase quest number by just talking over and over
-                    
+
                 }
+                }
+                else {
+                    // (quest is not completed)
+                    buttonOptionsObject.SetActive(false);
+                    continueButtonObject.SetActive(true);
+
+                    dialogueTextObject.text = "You have not completed your quest! Come back to me later";
+                }
+
+
+
+                
             }
             //This is a check if you have resources for the quest, and then removes them.
     }
@@ -193,5 +204,54 @@ public class DialogueManager : MonoBehaviour
         FinishedTalking.Invoke();
     }
 
+    public bool isQuestCompleted() {
+        Debug.Log("is quest complted " + PlayerPrefs.GetInt("QuestResourceAmount"));
+        Debug.Log("is quest complted " + PlayerPrefs.GetInt("QuestResource"));
+        Debug.Log(PlayerPrefs.GetInt("WoodAmount"));
+        Debug.Log(PlayerPrefs.GetInt("PollenAmount"));
+        Debug.Log(PlayerPrefs.GetInt("StoneAmount"));
+        Debug.Log(PlayerPrefs.GetInt("WaterAmount"));
+        
+
+        switch (PlayerPrefs.GetInt("QuestResource")) {
+            case 0:
+                // logs
+                // greater than or equal to
+                if (PlayerPrefs.GetInt("WoodAmount") >= PlayerPrefs.GetInt("QuestResourceAmount")) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            case 1:
+                //pollen
+                if (PlayerPrefs.GetInt("PollenAmount") >= PlayerPrefs.GetInt("QuestResourceAmount")) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            case 2:
+                //stone
+                if (PlayerPrefs.GetInt("StoneAmount") >= PlayerPrefs.GetInt("QuestResourceAmount")) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            case 3:
+                //water
+                if (PlayerPrefs.GetInt("WaterAmount") >= PlayerPrefs.GetInt("QuestResourceAmount")) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+
+            default:
+                Debug.LogError("How did we get here? You ran this when there was no quest resource and it went wahaha");
+                return false;
+        }
+    }
 
 }
