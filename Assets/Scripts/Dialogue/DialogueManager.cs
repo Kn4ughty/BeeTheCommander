@@ -98,8 +98,6 @@ public class DialogueManager : MonoBehaviour
                     // first one is is when text reset
                     // swimble is when thing. Idk this works cope
                     dialogueTextObject.text = requestString;
-                    PlayerPrefs.SetInt("QuestResource", SelectedResourceNum);
-                    PlayerPrefs.SetInt("QuestResourceAmount", SelectedResourceAmount);
                     swhimble = false;
                 }
             }
@@ -183,6 +181,8 @@ public class DialogueManager : MonoBehaviour
             
             QuestNumber = PlayerPrefs.GetInt("QuestNumber");
             //dialogueTextObject.text += "quest numbre: " + QuestNumber.ToString();
+            PlayerPrefs.SetInt("QuestResource", SelectedResourceNum);
+            PlayerPrefs.SetInt("QuestResourceAmount", SelectedResourceAmount);
             Debug.Log(QuestNumber);
         }
         else {
