@@ -2721,9 +2721,7 @@ MonoBehaviour:
   - Our hive needs worker bees to gather nectar and pollen from the flowers, to repair
     the broken chambers, and to rebuild our population. We need to strengthen our
     numbers and ensure the survival of our species.
-  - First, I will teach you the ways of gathering nectar and pollen efficiently.
-    You'll learn to navigate the meadow, avoid predators, and bring back the vital
-    resources we need to rebuild.
+  - You can do this.
   NPCImage: {fileID: 21300000, guid: 77a19c51beeeb4e80a50bbf6c97d53bf, type: 3}
   hasOptionButtons: 1
   DialogueManager: {fileID: 1579301796}
