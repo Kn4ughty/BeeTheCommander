@@ -2792,6 +2792,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6743460227561951058, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6743460227561951059, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2855,6 +2859,38 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6743460227561951062, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
   m_PrefabInstance: {fileID: 1320481987}
   m_PrefabAsset: {fileID: 0}
+--- !u!68 &1320481997
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320481988}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.03842807, y: 0.9442883}
+  - {x: -0.18094571, y: 0.792568}
+  - {x: -0.26472208, y: 0.41063547}
+  - {x: -0.39446548, y: -0.240701}
+  - {x: -0.38679752, y: -0.37797952}
+  - {x: -0.36607492, y: -0.748974}
+  - {x: -0.0894203, y: -0.92934054}
+  - {x: 0.26689446, y: -0.8628128}
+  - {x: 0.3996476, y: -0.5782872}
+  - {x: 0.27940533, y: 0.014275771}
+  - {x: 0.19237545, y: 0.53363067}
+  - {x: 0.05408825, y: 0.9637229}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1381442959
 GameObject:
   m_ObjectHideFlags: 0
@@ -4212,6 +4248,7 @@ GameObject:
   - component: {fileID: 1890635144}
   - component: {fileID: 1890635143}
   - component: {fileID: 1890635145}
+  - component: {fileID: 1890635146}
   m_Layer: 0
   m_Name: Hiveborder
   m_TagString: Untagged
@@ -4324,6 +4361,27 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!50 &1890635146
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890635142}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1905102294
 GameObject:
   m_ObjectHideFlags: 0

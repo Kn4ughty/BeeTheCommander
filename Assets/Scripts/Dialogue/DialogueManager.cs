@@ -104,10 +104,6 @@ public class DialogueManager : MonoBehaviour
                 }
             }
             //This is a check if you have resources for the quest, and then removes them.
-            if ()
-            {
-
-            }
     }
     
     // First code run.

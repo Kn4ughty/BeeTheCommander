@@ -193,6 +193,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _interactionPromptUI: {fileID: 0}
+  pollenText: {fileID: 0}
+  woodText: {fileID: 0}
+  waterText: {fileID: 0}
+  stoneText: {fileID: 0}
 --- !u!95 &6743460227561951149
 Animator:
   serializedVersion: 5
@@ -226,3 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144f0deaacbc6468697c95e8700e6799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pollenText: {fileID: 0}
+  woodText: {fileID: 0}
+  waterText: {fileID: 0}
+  stoneText: {fileID: 0}
