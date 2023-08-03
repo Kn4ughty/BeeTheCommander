@@ -4,9 +4,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-
 // For this code, i have decided to use highly descriptive,
 // but long variable names to make the code easier to understand
+// Update: i gave up on this lmao
+// private bool schamble = false; private bool swhimble = true;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -39,6 +40,16 @@ public class DialogueManager : MonoBehaviour
     public bool hasOptionButtons = false; // Set false in case forgorten
 
 
+    private string[] resourceTypes = {"logs", "pollen", "stone", "water"};
+    private string requestString;
+    [HideInInspector]
+    public string SelectedResource;
+    [HideInInspector]
+    public int SelectedResourceNum;
+    [HideInInspector]
+    public int SelectedResourceAmount;
+    private bool schamble = false;
+    private bool swhimble = true;
 
     public delegate void FinishedTalkingDelegate();
     public static event FinishedTalkingDelegate FinishedTalking;
@@ -63,7 +74,23 @@ public class DialogueManager : MonoBehaviour
             {
                 buttonOptionsObject.SetActive(true);
                 continueButtonObject.SetActive(false);
-                Debug.Log("wahwahahahahahahahahahahahahgex gex");
+                SelectedResourceNum = Random.Range(0, 3);
+                SelectedResource = resourceTypes[SelectedResourceNum];
+                SelectedResourceAmount = Random.Range(5, 20);
+                // result : Fetch me 15 water.
+                requestString = "Fetch me " + SelectedResourceAmount + " " + SelectedResource;
+                // to do write this to playerprefs.
+
+                dialogueStringArray[stringArrayIndex] = requestString;
+                if (schamble && swhimble) { // deal with the names
+                    // the variable things are so that this only runs once and not every frame
+                    // first one is is when text reset
+                    // swimble is when thing. Idk this works cope
+                    dialogueTextObject.text = requestString;
+                    PlayerPrefs.SetInt("QuestResource", SelectedResourceNum);
+                    PlayerPrefs.SetInt("QuestResourceAmount", SelectedResourceAmount);
+                    swhimble = false;
+                }
             }
     }
     
@@ -80,6 +107,7 @@ public class DialogueManager : MonoBehaviour
         dialoguePanelObject.SetActive(true);
         buttonOptionsObject.SetActive(false);
         StartCoroutine(Typing());
+        schamble = true;
 
         // Stop player movement
         PlayerMovementComponent._speed = 0;
@@ -89,6 +117,7 @@ public class DialogueManager : MonoBehaviour
 
 
     public void ResetText() {
+        schamble = false;
         Debug.Log("Reseting dialogue text");
         dialogueTextObject.text = "";
         stringArrayIndex = 0;
@@ -109,17 +138,13 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("NextLine is running");
         continueButtonObject.SetActive(false);
 
-        if(stringArrayIndex == dialogueStringArray.Length -1 && hasOptionButtons) // last one before the end.
-        {
-            buttonOptionsObject.SetActive(true);
-            
-        }
 
         if(stringArrayIndex < dialogueStringArray.Length -1)
         {
             stringArrayIndex++;
             dialogueTextObject.text = "";
             StartCoroutine(Typing());
+            
         }
         else // There are no more lines | end of talking
         {
