@@ -12,8 +12,9 @@ public class QuestManager : MonoBehaviour
     int QuestNumber = PlayerPrefs.GetInt("QuestNumber");
 
     // Call this function whenever the variable is set to a new value
-    void Update()
-    {
+    void Start()
+    {   
+        QuestNumber = PlayerPrefs.GetInt("QuestNumber");
         if (QuestNumber == 1)
         {
             hive1.SetActive(true);

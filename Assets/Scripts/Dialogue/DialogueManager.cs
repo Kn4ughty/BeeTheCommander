@@ -192,7 +192,7 @@ public class DialogueManager : MonoBehaviour
             //dialogueTextObject.text += "quest numbre: " + QuestNumber.ToString();
             PlayerPrefs.SetInt("QuestResource", SelectedResourceNum);
             PlayerPrefs.SetInt("QuestResourceAmount", SelectedResourceAmount);
-            Debug.Log(QuestNumber);
+            Debug.Log(QuestNumber + "Weewoo!!!");
         }
         else {
             Debug.Log("Declined");
