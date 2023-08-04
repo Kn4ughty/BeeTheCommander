@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -103,7 +103,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28ee498f65d74dcebacba75a727e05a
+      internalID: 1836512028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_1
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11f16c04c3074ac0830632a44cc1599
+      internalID: -529803434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_2
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c368fe3c252443388af7f7081c804a
+      internalID: -1600729935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_3
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c97d6f42fc114cf093e35371157b861
+      internalID: 2035310096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_4
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfa34fe6f19e4b32b9407441fc22620
+      internalID: 1871871128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_5
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fccc61b711a4929aa2391678d7d23e
+      internalID: -906024122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_6
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c43974d7b582408caeca5a6cb246029
+      internalID: 1257161203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_7
+      rect:
+        serializedVersion: 2
+        x: 6272
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0d462a96dd8480aad531017c4ce3f4
+      internalID: 188350122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_8
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd88a8d6b07554a53b33e8e4dfb35b3d
+      internalID: -589165800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_9
+      rect:
+        serializedVersion: 2
+        x: 8064
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b586990d0b6604bb6a0e5aecd94a5b41
+      internalID: 1831803676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_10
+      rect:
+        serializedVersion: 2
+        x: 8960
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abf116a4c5d2407bb9718cf9c40b36e
+      internalID: -46690649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_11
+      rect:
+        serializedVersion: 2
+        x: 9856
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016428d943f3148fca011d618b9abc6e
+      internalID: -1898365600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_12
+      rect:
+        serializedVersion: 2
+        x: 10752
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d174040209f740dab8028ba0331a08e
+      internalID: 473018644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_13
+      rect:
+        serializedVersion: 2
+        x: 11648
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea0b5b7fc2304e87b0f5ccbbab66fac
+      internalID: 1821632973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_14
+      rect:
+        serializedVersion: 2
+        x: 12544
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56a84fffb293447c8c30216234976dd
+      internalID: -755808461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lesbian with spray bottle v5_15
+      rect:
+        serializedVersion: 2
+        x: 13440
+        y: 0
+        width: 896
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70adfe9d910b4322965a12fa9b0be92
+      internalID: -330248046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +450,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lesbian with spray bottle v5_0: 1836512028
+      lesbian with spray bottle v5_1: -529803434
+      lesbian with spray bottle v5_10: -46690649
+      lesbian with spray bottle v5_11: -1898365600
+      lesbian with spray bottle v5_12: 473018644
+      lesbian with spray bottle v5_13: 1821632973
+      lesbian with spray bottle v5_14: -755808461
+      lesbian with spray bottle v5_15: -330248046
+      lesbian with spray bottle v5_2: -1600729935
+      lesbian with spray bottle v5_3: 2035310096
+      lesbian with spray bottle v5_4: 1871871128
+      lesbian with spray bottle v5_5: -906024122
+      lesbian with spray bottle v5_6: 1257161203
+      lesbian with spray bottle v5_7: 188350122
+      lesbian with spray bottle v5_8: -589165800
+      lesbian with spray bottle v5_9: 1831803676
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
