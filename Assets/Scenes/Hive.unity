@@ -3695,7 +3695,7 @@ MonoBehaviour:
   continueButtonObject: {fileID: 1609005627}
   buttonOptionsObject: {fileID: 663072636}
   playerBee: {fileID: 1320481988}
-  wordSpeed: 0.001
+  wordSpeed: 0.002
   dialogueStringArray: []
   NPCNameString: 
   NPCImage: {fileID: 0}
