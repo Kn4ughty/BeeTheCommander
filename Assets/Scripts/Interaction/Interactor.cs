@@ -85,6 +85,8 @@ public class Interactor : MonoBehaviour
                 if (Input.GetKeyDown("e")) {
                     _interactable.Interact(this);
 
+                    if (_collectable != null) {
+
                     // bagel bagel
                     bagel = _collectable.pollenAmount + PlayerPrefs.GetInt("pollenAmount");
                     pollenText.text = "Pollen: " + bagel;
@@ -102,6 +104,7 @@ public class Interactor : MonoBehaviour
                     pollenText.text = "Stone: " + bagel;
                     PlayerPrefs.SetInt("StoneAmount", bagel);
                     // StoneAmount? I hardly know her! 
+                    }
                 }
             }
             /*

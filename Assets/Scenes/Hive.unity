@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 94559866}
   - component: {fileID: 94559865}
   - component: {fileID: 94559864}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Lia Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 114657950}
   - component: {fileID: 114657949}
   - component: {fileID: 114657948}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Oscbee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 209703636}
   - component: {fileID: 209703633}
   - component: {fileID: 209703632}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Log NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 322718402}
   - component: {fileID: 322718401}
   - component: {fileID: 322718400}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Lumberjack Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 436597092}
   - component: {fileID: 436597091}
   - component: {fileID: 436597090}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Liam Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1058,6 +1058,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &445682604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445682605}
+  - component: {fileID: 445682608}
+  - component: {fileID: 445682607}
+  - component: {fileID: 445682606}
+  m_Layer: 0
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &445682605
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445682604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -397.10318}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1751319691}
+  m_Father: {fileID: 1579301795}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -657.9199, y: -98.81592}
+  m_SizeDelta: {x: 498, y: 280}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &445682606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445682604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &445682607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445682604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &445682608
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445682604}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &456629623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1188,7 +1289,7 @@ GameObject:
   - component: {fileID: 471339093}
   - component: {fileID: 471339092}
   - component: {fileID: 471339091}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Omni Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1597,7 +1698,7 @@ GameObject:
   - component: {fileID: 762020893}
   - component: {fileID: 762020892}
   - component: {fileID: 762020891}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Alien Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1928,7 +2029,7 @@ GameObject:
   - component: {fileID: 854716480}
   - component: {fileID: 854716479}
   - component: {fileID: 854716478}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Tiny Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2370,7 +2471,7 @@ GameObject:
   - component: {fileID: 1205168118}
   - component: {fileID: 1205168117}
   - component: {fileID: 1205168116}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Aaron Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2612,7 +2713,7 @@ GameObject:
   - component: {fileID: 1242750536}
   - component: {fileID: 1242750535}
   - component: {fileID: 1242750537}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Queen Bee NPC
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2854,6 +2955,10 @@ PrefabInstance:
       propertyPath: _interactionPromptUI
       value: 
       objectReference: {fileID: 456629624}
+    - target: {fileID: 8032078936961655271, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
+      propertyPath: _interactableMask.m_Bits
+      value: 72
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd0131b60ce943f599d4043d6bb1d8b, type: 3}
 --- !u!1 &1320481988 stripped
@@ -2948,8 +3053,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1781393579
+  m_SortingLayer: -2
   m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: 9f2e41c8debda477d879b54f5bfc8cc3, type: 3}
   m_Color: {r: 0.889, g: 0.889, b: 0.889, a: 1}
@@ -2991,7 +3096,7 @@ GameObject:
   - component: {fileID: 1440426814}
   - component: {fileID: 1440426813}
   - component: {fileID: 1440426812}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Naked Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3285,6 +3390,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475224591}
   m_CullTransparentMesh: 1
+--- !u!1 &1518458162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518458164}
+  - component: {fileID: 1518458163}
+  m_Layer: 0
+  m_Name: Boids
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1518458163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518458162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1425cb95cfca64be3817ad74ddfb8b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 1542871014}
+  numBees: 40
+  allBees: []
+  FlyLimit: {x: 20, y: 10}
+  goalPos: {x: 0, y: 0}
+  minSpeed: 5
+  maxSpeed: 10
+  neighbourDistance: 10
+  rotationSpeed: 2
+  targetPositionRandom: 1
+--- !u!4 &1518458164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518458162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.471734}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530187950
 GameObject:
   m_ObjectHideFlags: 0
@@ -3331,6 +3490,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1542871014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9218219942594546035, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+  m_PrefabInstance: {fileID: 2116959209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1542871017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542871014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51863a7129a5b480aa8b77a58e59ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &1578256133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,6 +3672,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2044390962}
+  - {fileID: 445682605}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3517,7 +3695,7 @@ MonoBehaviour:
   continueButtonObject: {fileID: 1609005627}
   buttonOptionsObject: {fileID: 663072636}
   playerBee: {fileID: 1320481988}
-  wordSpeed: 0.001
+  wordSpeed: 0.002
   dialogueStringArray: []
   NPCNameString: 
   NPCImage: {fileID: 0}
@@ -3930,6 +4108,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677966774}
   m_CullTransparentMesh: 1
+--- !u!1 &1751319690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751319691}
+  - component: {fileID: 1751319693}
+  - component: {fileID: 1751319692}
+  m_Layer: 0
+  m_Name: tips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1751319691
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751319690}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 445682605}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -248.95, y: -135.65}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1751319692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751319690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Tip! Press "E" to interact
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 5
+  m_fontSizeBase: 5
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 124.06589, w: 41.90672}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1751319693
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751319690}
+  m_CullTransparentMesh: 1
 --- !u!1 &1817842721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,7 +4392,7 @@ GameObject:
   - component: {fileID: 1832700867}
   - component: {fileID: 1832700866}
   - component: {fileID: 1832700865}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Happy Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4398,7 +4711,7 @@ GameObject:
   - component: {fileID: 1905102298}
   - component: {fileID: 1905102297}
   - component: {fileID: 1905102296}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Eric Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4673,7 +4986,7 @@ GameObject:
   - component: {fileID: 2086922656}
   - component: {fileID: 2086922655}
   - component: {fileID: 2086922654}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Crazy Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4834,6 +5147,119 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2116959209
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_Size.x
+      value: 6.038306
+      objectReference: {fileID: 0}
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_Size.y
+      value: 6.0235295
+      objectReference: {fileID: 0}
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1569005911, guid: a88d1edae34cb45cc9855c37fd32eb44, type: 3}
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.823
+      objectReference: {fileID: 0}
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.823
+      objectReference: {fileID: 0}
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.823
+      objectReference: {fileID: 0}
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1601411899
+      objectReference: {fileID: 0}
+    - target: {fileID: -7481862448928812164, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089059892615799832, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218219942594546035, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
+      propertyPath: m_Name
+      value: Boid
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7a8ce71aab464f52bb59a063e700d4b, type: 3}
 --- !u!1001 &5879921408714966533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4848,6 +5274,10 @@ PrefabInstance:
     - target: {fileID: 5879921408041175972, guid: fd926a3ed53774897b93f9971d6769aa, type: 3}
       propertyPath: m_Name
       value: Steward Bee
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879921408041175972, guid: fd926a3ed53774897b93f9971d6769aa, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5879921408041175975, guid: fd926a3ed53774897b93f9971d6769aa, type: 3}
       propertyPath: m_RootOrder

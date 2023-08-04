@@ -57,6 +57,9 @@ public class DialogueManager : MonoBehaviour
 
     private int stringArrayIndex = 0;
 
+    private float StartLineTime;
+    private float endLineTime;
+
     private void Start() {
         NPCImageComponent = NPCImageObject.GetComponent<Image>();
         dialoguePanelObject.SetActive(false);
@@ -64,6 +67,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void Update() {
+
+        if (StartLineTime != null && endLineTime != null && Time.time >= endLineTime) {
+            continueButtonObject.SetActive(true);
+        }
+
         // If the text on screen matches the stored text, turn on the continue button
         // And the index is not greater than the size of the array
         if (stringArrayIndex < dialogueStringArray.Length && dialogueTextObject.text == dialogueStringArray[stringArrayIndex])
@@ -94,8 +102,6 @@ public class DialogueManager : MonoBehaviour
                     Debug.Log(SelectedResource);
                     Debug.Log(SelectedResourceAmount);
 
-                    // problem you can increase quest number by just talking over and over
-
                 }
                 }
                 else {
@@ -125,6 +131,8 @@ public class DialogueManager : MonoBehaviour
 
         dialoguePanelObject.SetActive(true);
         buttonOptionsObject.SetActive(false);
+        StartLineTime = Time.time;
+        endLineTime = StartLineTime + 5f;
         StartCoroutine(Typing());
         schamble = true;
 
@@ -154,6 +162,8 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void NextLine() {
+        StartLineTime = Time.time;
+        endLineTime = StartLineTime + 5f;
         Debug.Log("NextLine is running");
         continueButtonObject.SetActive(false);
 

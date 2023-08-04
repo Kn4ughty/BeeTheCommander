@@ -2,5 +2,6 @@
     "editor.suggest.showReferences": false,
     "files.exclude": {
         "**/*.meta": true
-    }
+    },
+    "dotnet.defaultSolution": "BeeGamey.sln"
 }
