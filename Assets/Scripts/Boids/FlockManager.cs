@@ -45,7 +45,7 @@ public class FlockManager : MonoBehaviour
     {
         if(targetPositionRandom) {
             // Set target position randomly
-            if (Random.Range(0, 10000) < 10) {
+            if (Random.Range(0, 1000) < 10) {
                 goalPos = new Vector2(transform.position.x, transform.position.y) + new Vector2(Random.Range(-FlyLimit.x, FlyLimit.x), 
                                                                                                 Random.Range(-FlyLimit.y, FlyLimit.y));
             } 

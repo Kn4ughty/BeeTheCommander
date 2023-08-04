@@ -94,8 +94,6 @@ public class DialogueManager : MonoBehaviour
                     Debug.Log(SelectedResource);
                     Debug.Log(SelectedResourceAmount);
 
-                    // problem you can increase quest number by just talking over and over
-
                 }
                 }
                 else {
