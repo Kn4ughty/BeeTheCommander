@@ -8,6 +8,4 @@ public interface ICollectable
     public int woodAmount { get; set; }
     public int waterAmount { get; set; }
     public int stoneAmount { get; set; }
-
-
 }
